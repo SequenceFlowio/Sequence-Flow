@@ -25,9 +25,7 @@ const socialLinks = [
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <>
-    <div className="h-32 bg-gradient-to-b from-transparent to-[#1a1a2e] dark:to-background-8" />
-    <footer className={cn('bg-[#1a1a2e] dark:bg-background-8 relative z-0 overflow-hidden', className)}>
+    <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
       <RevealAnimation delay={0.3} offset={50} direction="up">
         <figure className="pointer-events-none absolute -top-[1320px] left-1/2 -z-1 size-[1635px] -translate-x-1/2 select-none">
           <Image src={gradientImg} alt="footer-four-gradient" className="size-full object-cover" />
@@ -46,7 +44,7 @@ const Footer = ({ className }: { className?: string }) => {
                 </p>
               </div>
               <div className="w-full max-w-[562px] lg:pl-9">
-                <CtaInputForm ctaBtnText="Verstuur" placeholder="Vul uw e-mailadres in" inputFieldClass="!border-accent/20 !text-accent !placeholder:text-accent/60" />
+                <CtaInputForm ctaBtnText="Verstuur" placeholder="Vul uw e-mailadres in" inputFieldClass="!border-accent/20 !text-accent placeholder:!text-white" />
               </div>
             </div>
           </RevealAnimation>
@@ -100,7 +98,6 @@ const Footer = ({ className }: { className?: string }) => {
         </div>
       </div>
     </footer>
-    </>
   );
 };
 Footer.displayName = 'Footer';
