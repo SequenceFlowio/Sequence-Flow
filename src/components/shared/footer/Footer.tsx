@@ -15,17 +15,19 @@ import FooterDivider from './FooterDivider';
 import CtaInputForm from '../cta/CtaInputForm';
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sequenceflow', icon: linkedin },
-  { name: 'X', href: 'https://x.com/SequenceFlow', icon: xTwitter },
-  { name: 'TikTok', href: 'https://www.tiktok.com/@sequenceflowio', icon: tiktok },
-  { name: 'Instagram', href: 'https://www.instagram.com/sequenceflow.io', icon: instagram },
-  { name: 'Facebook', href: 'https://www.facebook.com/sequenceflow', icon: facebook },
-  { name: 'Reddit', href: 'https://www.reddit.com/user/Sequenceflowio/', icon: reddit },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sequenceflow', icon: linkedin, sizeClass: 'size-6' },
+  { name: 'X', href: 'https://x.com/SequenceFlow', icon: xTwitter, sizeClass: 'size-[18px]' },
+  { name: 'TikTok', href: 'https://www.tiktok.com/@sequenceflowio', icon: tiktok, sizeClass: 'size-[18px]' },
+  { name: 'Instagram', href: 'https://www.instagram.com/sequenceflow.io', icon: instagram, sizeClass: 'size-6' },
+  { name: 'Facebook', href: 'https://www.facebook.com/sequenceflow', icon: facebook, sizeClass: 'size-6' },
+  { name: 'Reddit', href: 'https://www.reddit.com/user/Sequenceflowio/', icon: reddit, sizeClass: 'size-6' },
 ];
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
+    <>
+    <div className="h-32 bg-gradient-to-b from-transparent to-[#1a1a2e] dark:to-background-8" />
+    <footer className={cn('bg-[#1a1a2e] dark:bg-background-8 relative z-0 overflow-hidden', className)}>
       <RevealAnimation delay={0.3} offset={50} direction="up">
         <figure className="pointer-events-none absolute -top-[1320px] left-1/2 -z-1 size-[1635px] -translate-x-1/2 select-none">
           <Image src={gradientImg} alt="footer-four-gradient" className="size-full object-cover" />
@@ -44,7 +46,7 @@ const Footer = ({ className }: { className?: string }) => {
                 </p>
               </div>
               <div className="w-full max-w-[562px] lg:pl-9">
-                <CtaInputForm ctaBtnText="Verstuur" inputFieldClass="!border-accent/20 !text-accent !placeholder:text-accent/40" />
+                <CtaInputForm ctaBtnText="Verstuur" placeholder="Vul uw e-mailadres in" inputFieldClass="!border-accent/20 !text-accent !placeholder:text-accent/60" />
               </div>
             </div>
           </RevealAnimation>
@@ -65,7 +67,7 @@ const Footer = ({ className }: { className?: string }) => {
                 {socialLinks.map((social) => (
                   <Link key={social.name} target="_blank" href={social.href}>
                     <span className="sr-only">{social.name}</span>
-                    <Image className="size-6 opacity-60 transition-opacity hover:opacity-100" src={social.icon} alt={social.name} />
+                    <Image className={cn('opacity-60 transition-opacity hover:opacity-100', social.sizeClass)} src={social.icon} alt={social.name} />
                   </Link>
                 ))}
               </div>
@@ -98,6 +100,7 @@ const Footer = ({ className }: { className?: string }) => {
         </div>
       </div>
     </footer>
+    </>
   );
 };
 Footer.displayName = 'Footer';

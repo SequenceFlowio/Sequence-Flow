@@ -4,9 +4,10 @@ import { cn } from '@/utils/cn';
 interface CtaInputFormProps {
   ctaBtnText?: string;
   inputFieldClass?: string;
+  placeholder?: string;
 }
 
-const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputFormProps) => {
+const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass, placeholder = 'Enter your email' }: CtaInputFormProps) => {
   return (
     <RevealAnimation delay={0.4}>
       <form
@@ -18,7 +19,7 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass }: CtaInputF
           type="email"
           name="email"
           id="userEmail"
-          placeholder="Enter your email"
+          placeholder={placeholder}
           required
           className={cn(
             'placeholder:text-secondary/50 border-stroke-1 dark:border-stroke-7 dark:placeholder:text-accent/60 text-secondary dark:text-accent focus-visible:outline-stroke-7 focus:border-primary-600 dark:focus:border-primary-400 h-12.5 w-[85%] rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus:outline-none focus-visible:outline-1 md:w-[430px] lg:w-[440px]',
