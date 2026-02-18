@@ -12,7 +12,6 @@ export const footerLinks: FooterData[] = [
   {
     title: 'Menu',
     links: [
-      { label: 'Prijzen', href: '/prijzen' },
       { label: 'Hoe wij werken', href: '/hoe-wij-werken' },
       { label: 'Blog', href: '/blog' },
     ],

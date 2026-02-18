@@ -28,7 +28,6 @@ const navLinks: NavLink[] = [
       { label: 'Operations Flow', href: '/oplossingen/operations-flow' },
     ],
   },
-  { label: 'Prijzen', href: '/prijzen' },
   { label: 'Hoe wij werken', href: '/hoe-wij-werken' },
   { label: 'Blog', href: '/blog' },
 ];
