@@ -1,7 +1,6 @@
 import Client from '@/components/pricing/Client';
 import Faq from '@/components/pricing/Faq';
 import Pricing from '@/components/pricing/Pricing';
-import CTAV1 from '@/components/shared/cta/CTAV1';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -16,15 +15,6 @@ const page = () => {
       <Pricing />
       <Client />
       <Faq />
-      <CTAV1
-        className="dark:bg-background-5 bg-background-1"
-        badgeText="Start vandaag"
-        badgeClass="!badge-green"
-        ctaHeading="Klaar om te automatiseren?"
-        description="Laat uw e-mailadres achter en wij nemen contact met u op voor een vrijblijvend gesprek."
-        ctaBtnText="Verstuur"
-        showCheckList={false}
-      />
     </main>
   );
 };

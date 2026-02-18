@@ -1,5 +1,4 @@
 import Contents from '@/components/service-details/Contents';
-import CTAV1 from '@/components/shared/cta/CTAV1';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import getMarkDownData from '@/utils/getMarkDownData';
 import { Metadata } from 'next';
@@ -22,15 +21,6 @@ const OurServicesDetails = async ({ params }: { params: Promise<{ slug: string }
   return (
     <main className="bg-background-3 dark:bg-background-7">
       <Contents slug={slug} />
-      <CTAV1
-        className="dark:bg-background-5 bg-background-1"
-        badgeText="Start vandaag"
-        badgeClass="!badge-green"
-        ctaHeading="Klaar om te automatiseren?"
-        description="Laat uw e-mailadres achter en wij nemen contact met u op voor een vrijblijvend gesprek."
-        ctaBtnText="Verstuur"
-        showCheckList={false}
-      />
     </main>
   );
 };
