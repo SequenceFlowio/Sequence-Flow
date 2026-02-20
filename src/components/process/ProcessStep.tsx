@@ -112,7 +112,7 @@ const ProcessStep = () => {
                 </div>
                 <RevealAnimation delay={0.2}>
                   <div className="card-item dark:bg-background-6 max-sm:bg-background-4 absolute top-1/2 left-1/2 w-full max-w-[370px] -translate-x-1/2 -translate-y-1/2 space-y-3 rounded-[20px] p-6 lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0 lg:rounded-none lg:bg-none lg:p-0 lg:dark:bg-transparent">
-                    <p className="text-tagline-2 text-[#C7F56F]">STAP 1</p>
+                    <p className="text-tagline-2 text-black">STAP 1</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5">Intake &amp; procesanalyse</h3>
                       <p>
@@ -158,7 +158,7 @@ const ProcessStep = () => {
                 </div>
                 <RevealAnimation delay={0.3}>
                   <div className="card-item dark:bg-background-6 max-sm:bg-background-4 absolute top-1/2 right-1/2 w-full max-w-[370px] translate-x-1/2 -translate-y-1/2 space-y-3 rounded-[20px] p-6 lg:top-0 lg:right-0 lg:translate-x-0 lg:translate-y-0 lg:rounded-none lg:bg-none lg:p-0 lg:dark:bg-transparent">
-                    <p className="text-tagline-2 text-[#C7F56F]">STAP 2</p>
+                    <p className="text-tagline-2 text-black">STAP 2</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[293px]">
                         Flow ontwerp &amp; architectuur
@@ -206,7 +206,7 @@ const ProcessStep = () => {
                 </div>
                 <RevealAnimation delay={0.4}>
                   <div className="card-item dark:bg-background-6 max-sm:bg-background-4 absolute top-1/2 left-1/2 w-full max-w-[370px] -translate-x-1/2 -translate-y-1/2 space-y-3 rounded-[20px] p-6 lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0 lg:rounded-none lg:bg-none lg:p-0 lg:dark:bg-transparent">
-                    <p className="text-tagline-2 text-[#C7F56F]">STAP 3</p>
+                    <p className="text-tagline-2 text-black">STAP 3</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[236px]">
                         Bouw &amp; integratie
@@ -254,7 +254,7 @@ const ProcessStep = () => {
                 </div>
                 <RevealAnimation delay={0.5}>
                   <div className="card-item dark:bg-background-6 max-sm:bg-background-4 absolute top-1/2 right-1/2 w-full max-w-[370px] translate-x-1/2 -translate-y-1/2 space-y-3 rounded-[20px] p-6 lg:top-0 lg:right-0 lg:translate-x-0 lg:translate-y-0 lg:rounded-none lg:bg-none lg:p-0 lg:dark:bg-transparent">
-                    <p className="text-tagline-2 text-[#C7F56F]">STAP 4</p>
+                    <p className="text-tagline-2 text-black">STAP 4</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[236px]">
                         Testen &amp; optimaliseren
@@ -273,7 +273,7 @@ const ProcessStep = () => {
                 </div>
                 <RevealAnimation delay={0.6}>
                   <div className="card-item dark:bg-background-6 max-sm:bg-background-4 absolute top-16 left-1/2 w-full max-w-[370px] -translate-x-1/2 space-y-3 rounded-[20px] p-6 lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0 lg:rounded-none lg:bg-none lg:p-0 lg:dark:bg-transparent">
-                    <p className="text-tagline-2 text-[#C7F56F]">STAP 5</p>
+                    <p className="text-tagline-2 text-black">STAP 5</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[203px]">
                         Oplevering &amp; ondersteuning
