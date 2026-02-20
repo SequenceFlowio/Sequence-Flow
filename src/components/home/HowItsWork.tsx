@@ -86,8 +86,8 @@ const HowItsWork = () => {
 
         <RevealAnimation delay={0.5}>
           <div className="group mt-14 text-center">
-            <LinkButton href="/pricing" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
-              Bekijk onze prijzen
+            <LinkButton href="/oplossingen" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
+              Bekijk onze oplossingen
             </LinkButton>
           </div>
         </RevealAnimation>
