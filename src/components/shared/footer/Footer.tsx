@@ -8,7 +8,7 @@ import instagram from '@public/images/icons/instagram.svg';
 import facebook from '@public/images/icons/facebook.svg';
 import reddit from '@public/images/icons/reddit.svg';
 import gradientImg from '@public/images/ns-img-532.png';
-import logoWit from '@/components/new-logo/sequenceflow-logo-wit.png';
+import logoWit from '@/components/content/sequenceflow-logo-wit.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterDivider from './FooterDivider';

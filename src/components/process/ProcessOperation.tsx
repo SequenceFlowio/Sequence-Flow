@@ -1,5 +1,4 @@
-import ProcessImage from '@public/images/ns-img-49.png';
-import ProcessDarkImage from '@public/images/ns-img-dark-28.png';
+import ProcessImage from '@/components/content/hoe-wij-werken.webp';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
@@ -28,12 +27,7 @@ const ProcessOperation = () => {
             <RevealAnimation delay={0.4}>
               <div>
                 <figure className="mx-auto max-h-[547px] max-w-[478px] lg:mx-0">
-                  <Image src={ProcessImage} alt="process" className="block h-full w-full object-cover dark:hidden" />
-                  <Image
-                    src={ProcessDarkImage}
-                    alt="process"
-                    className="hidden h-full w-full object-cover dark:block"
-                  />
+                  <Image src={ProcessImage} alt="process" className="h-full w-full object-cover" />
                 </figure>
               </div>
             </RevealAnimation>
