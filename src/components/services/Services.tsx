@@ -1,16 +1,12 @@
-import avatar1 from '@public/images/ns-avatar-1.png';
-import avatar2 from '@public/images/ns-avatar-2.png';
-import avatar3 from '@public/images/ns-avatar-3.png';
-import timeIncrease from '@public/images/ns-img-100.png';
-import controlCard from '@public/images/ns-img-101.png';
-import revenue from '@public/images/ns-img-102.png';
-import balance from '@public/images/ns-img-103.png';
-import earning from '@public/images/ns-img-393.svg';
-import dailyPayment from '@public/images/ns-img-395.svg';
-import earningDark from '@public/images/ns-img-dark-212.svg';
-import dailyPaymentDark from '@public/images/ns-img-dark-214.svg';
-import revenueDark from '@public/images/ns-img-dark-74.png';
-import balanceDark from '@public/images/ns-img-dark-75.png';
+import leadFlow1 from '@/components/content/lead-flow-1.webp';
+import leadFlow2 from '@/components/content/lead-flow-2.webp';
+import supportFlow1 from '@/components/content/support-flow-1.webp';
+import supportFlow2 from '@/components/content/support-flow-2.webp';
+import operationsFlow1 from '@/components/content/operations-flow-1.svg';
+import operationsFlow2 from '@/components/content/operations-flow-2.webp';
+import opsAvatar1 from '@/components/content/operations-flow-avatar-1.webp';
+import opsAvatar2 from '@/components/content/operations-flow-avatar-2.webp';
+import opsAvatar3 from '@/components/content/operations-flow-avatar-3.webp';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 import LinkButton from '../ui/button/Button';
@@ -52,10 +48,10 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-6">
                   <div className="flex items-center gap-8">
                     <figure className="w-full max-w-[233px] overflow-hidden rounded-2xl">
-                      <Image src={timeIncrease} alt="lead flow" className="w-full" />
+                      <Image src={leadFlow1} alt="lead flow" className="w-full" />
                     </figure>
                     <figure className="w-full max-w-[350px] overflow-hidden rounded-[20px]">
-                      <Image src={controlCard} alt="lead flow" className="w-full" />
+                      <Image src={leadFlow2} alt="lead flow" className="w-full" />
                     </figure>
                   </div>
                 </div>
@@ -68,12 +64,10 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-6">
                   <div className="flex items-center gap-8">
                     <figure className="h-full max-h-[317px] w-full max-w-[326px] overflow-hidden rounded-[20px]">
-                      <Image src={revenue} alt="support flow" className="h-full w-full object-cover dark:hidden" />
-                      <Image src={revenueDark} alt="support flow" className="hidden h-full w-full object-cover dark:block" />
+                      <Image src={supportFlow1} alt="support flow" className="h-full w-full object-cover" />
                     </figure>
                     <figure className="h-full max-h-[178px] w-full max-w-[255px] overflow-hidden rounded-2xl">
-                      <Image src={balance} alt="support flow" className="h-full w-full object-cover dark:hidden" />
-                      <Image src={balanceDark} alt="support flow" className="hidden h-full w-full object-cover dark:block" />
+                      <Image src={supportFlow2} alt="support flow" className="h-full w-full object-cover" />
                     </figure>
                   </div>
                 </div>
@@ -122,38 +116,28 @@ const Services = () => {
                 <div className="col-span-12 lg:col-span-6">
                   <div className="flex items-start gap-8">
                     <figure className="h-full max-h-[345px] w-full max-w-[350px] overflow-hidden rounded-[20px]">
-                      <Image src={earning} alt="operations flow" className="h-full w-full object-cover dark:hidden" />
-                      <Image src={earningDark} alt="operations flow" className="hidden h-full w-full object-cover dark:block" />
+                      <Image src={operationsFlow1} alt="operations flow" className="h-full w-full object-cover" />
                     </figure>
                     <div className="space-y-8">
                       <figure className="h-full max-h-[190px] w-full max-w-[286px] overflow-hidden rounded-2xl">
-                        <Image
-                          src={dailyPayment}
-                          alt="operations flow"
-                          className="h-full w-full object-cover dark:hidden"
-                        />
-                        <Image
-                          src={dailyPaymentDark}
-                          alt="operations flow"
-                          className="hidden h-full w-full object-cover dark:block"
-                        />
+                        <Image src={operationsFlow2} alt="operations flow" className="h-full w-full object-cover" />
                       </figure>
                       <div>
                         <div className="space-y-4">
                           <div className="flex cursor-pointer -space-x-3.5">
                             <Image
                               className="bg-ns-green inline-block size-11 rounded-full ring-4 ring-white"
-                              src={avatar1}
+                              src={opsAvatar1}
                               alt="Avatar 1"
                             />
                             <Image
                               className="bg-ns-green inline-block size-11 rounded-full ring-4 ring-white"
-                              src={avatar2}
+                              src={opsAvatar2}
                               alt="Avatar 2"
                             />
                             <Image
                               className="bg-ns-green relative z-0 inline-block size-11 rounded-full ring-4 ring-white"
-                              src={avatar3}
+                              src={opsAvatar3}
                               alt="Avatar 3"
                             />
                             <div className="bg-ns-green text-secondary/80 text-tagline-3 relative z-10 inline-flex size-11 items-center justify-center rounded-full font-medium ring-4 ring-white">
