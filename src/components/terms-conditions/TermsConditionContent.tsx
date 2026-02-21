@@ -10,12 +10,12 @@ const TermsConditionContent = () => {
             <h2>Terms &amp; conditions</h2>
             <div className="space-y-7">
               <p>
-                This site, sequenceflow.nl (hereafter referred to as SequenceFlow, site, or website) is owned and operated by
+                This site, sequenceflow.io (hereafter referred to as SequenceFlow, site, or website) is owned and operated by
                 SequenceFlow Technologies LLC (hereafter referred to as SequenceFlow, we, or company).
               </p>
               <p>
                 Please carefully read, review, and understand our Terms and Conditions before using any services or
-                products from sequenceflow.nl. Your access to and use of this website and its products indicate that you
+                products from sequenceflow.io. Your access to and use of this website and its products indicate that you
                 accept and agree to be bound by these terms and conditions.
               </p>
               <p>

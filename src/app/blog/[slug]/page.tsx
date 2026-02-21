@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return generateMetadataUtil(
     blog.data.title as string,
     blog.data.description as string,
-    `https://sequenceflow.nl/blog/${slug}`,
+    `https://sequenceflow.io/blog/${slug}`,
     blog.data.thumbnail as string,
   );
 }

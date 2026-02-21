@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const blogs = getMarkDownData('src/data/blogs');
-  const baseUrl = 'https://sequenceflow.nl';
+  const baseUrl = 'https://sequenceflow.io';
 
   const staticPages = ['/', '/blog', '/oplossingen', '/hoe-wij-werken', '/contact'].map((path) => ({
     url: `${baseUrl}${path}`,
