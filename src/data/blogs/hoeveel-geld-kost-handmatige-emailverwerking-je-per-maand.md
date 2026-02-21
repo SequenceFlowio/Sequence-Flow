@@ -1,7 +1,7 @@
 ---
 tag: ai-automation
 author: SequenceFlow Redactie
-authorImage: /images/ns-avatar-10.png
+authorImage: /images/sequenceflow-avatar.png
 publishDate: 21 feb 2026
 title: Hoeveel geld kost handmatige e-mailverwerking je per maand?
 description: Nederlandse MKB-bedrijven besteden gemiddeld 11 uur per week aan het handmatig verwerken van e-mail. We berekenen wat dat echt kost en hoe autonome flows dit elimineren.
