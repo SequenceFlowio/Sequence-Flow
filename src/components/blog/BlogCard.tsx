@@ -48,7 +48,7 @@ export const BlogCard = ({ blog }: { blog: IBlogPost }) => {
           </h3>
           <div className="mt-8">
             <LinkButton href={`/blog/${blog.slug}`} btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2">
-              Read more
+              Lees meer
             </LinkButton>
           </div>
         </div>

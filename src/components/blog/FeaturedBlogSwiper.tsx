@@ -80,7 +80,7 @@ const FeaturedBlogSwiper = ({ featuredBlogs }: FeaturedBlogSwiperProps) => {
                       <LinkButton
                         btnClass="btn-md-v2 btn-v2-white group-hover/btn-v2:btn-primary-v2"
                         href={`/blog/${blog.slug}`}>
-                        Read more
+                        Lees meer
                       </LinkButton>
                     </div>
                   </div>

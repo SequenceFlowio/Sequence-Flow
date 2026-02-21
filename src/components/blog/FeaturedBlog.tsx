@@ -12,10 +12,10 @@ const FeaturedBlog = () => {
         <div className="space-y-14 md:space-y-[70px]">
           <div className="mx-auto max-w-[700px] space-y-3 text-center">
             <RevealAnimation delay={0.1}>
-              <h2>Our Latest Thinking Articles</h2>
+              <h2>Onze laatste inzichten &amp; artikelen</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
-              <p>Our recent news &amp; insights highlight the latest developments and trends shaping our industry.</p>
+              <p>Onze recente artikelen belichten de laatste ontwikkelingen en trends die onze industrie vormgeven.</p>
             </RevealAnimation>
           </div>
           {/* Featured blog swiper */}

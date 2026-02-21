@@ -12,13 +12,13 @@ const BlogShowcase = () => {
         <div className="mb-10 space-y-3 text-center md:mb-[70px]">
           <RevealAnimation delay={0.1}>
             <h2>
-              Our recent <span className="text-primary-500 inline-block">news &amp; insights</span>
+              Alle <span className="text-[#C7F56F] inline-block">artikelen &amp; inzichten</span>
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <p className="mx-auto max-w-[738px]">
-              Our recent news and insights highlight the latest developments, achievements, and thought leadership
-              shaping our journey forward. From product innovations and strategic partnerships to industry trends
+              Onze artikelen en inzichten belichten de nieuwste ontwikkelingen, prestaties en thought leadership die
+              onze weg vooruit vormgeven — van productinnovaties tot trends in de industrie.
             </p>
           </RevealAnimation>
         </div>
