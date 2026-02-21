@@ -12,7 +12,7 @@ const BlogShowcase = () => {
         <div className="mb-10 space-y-3 text-center md:mb-[70px]">
           <RevealAnimation delay={0.1}>
             <h2>
-              Alle <span className="text-[#C7F56F] inline-block">artikelen &amp; inzichten</span>
+              Alle artikelen &amp; inzichten
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
