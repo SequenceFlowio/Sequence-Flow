@@ -5,7 +5,7 @@ const ShareLink = () => {
   return (
     <RevealAnimation delay={0.2}>
       <div className="mx-auto mt-[70px] max-w-[950px] space-y-4">
-        <h5 className="text-heading-6">Share this post</h5>
+        <h5 className="text-heading-6">Deel dit artikel</h5>
         <ul className="flex items-center gap-2.5">
           <li className="group/social-link border-secondary/10 dark:border-stroke-7 hover:bg-primary-500 hover:border-primary-500 inline-flex items-center justify-center rounded-full border p-2.5 transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg">
             <Link href="https://www.facebook.com/sharer/sharer.php?u=https://www.google.com" target="_blank">
