@@ -5,12 +5,12 @@ interface CtaInputFormProps {
   ctaBtnText?: string;
   inputFieldClass?: string;
   placeholder?: string;
+  noAnimation?: boolean;
 }
 
-const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass, placeholder = 'Enter your email' }: CtaInputFormProps) => {
-  return (
-    <RevealAnimation delay={0.4}>
-      <form
+const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass, placeholder = 'Enter your email', noAnimation }: CtaInputFormProps) => {
+  const form = (
+    <form
         action="#"
         method="post"
         className="flex flex-col items-center justify-start gap-3 md:flex-row"
@@ -72,8 +72,8 @@ const CtaInputForm = ({ ctaBtnText = 'Get Started', inputFieldClass, placeholder
           </button>
         </div>
       </form>
-    </RevealAnimation>
   );
+  return noAnimation ? form : <RevealAnimation delay={0.4}>{form}</RevealAnimation>;
 };
 CtaInputForm.displayName = 'CtaInputForm';
 

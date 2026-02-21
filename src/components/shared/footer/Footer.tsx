@@ -40,7 +40,7 @@ const Footer = ({ className }: { className?: string }) => {
               </p>
             </div>
             <div className="w-full max-w-[562px] lg:pl-9">
-              <CtaInputForm ctaBtnText="Verstuur" placeholder="Vul uw e-mailadres in" inputFieldClass="!border-accent/20 !text-accent placeholder:!text-white" />
+              <CtaInputForm ctaBtnText="Verstuur" placeholder="Vul uw e-mailadres in" inputFieldClass="!border-accent/20 !text-accent placeholder:!text-white" noAnimation />
             </div>
           </div>
         </div>
