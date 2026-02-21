@@ -4,7 +4,6 @@ import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
 import RevealAnimation from '../animation/RevealAnimation';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
-import Comment from './Comment';
 import ShareLink from './ShareLink';
 
 interface FaqItem {
@@ -94,7 +93,6 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
 
         {/* details-footer */}
         <ShareLink />
-        <Comment />
       </div>
     </section>
   );
