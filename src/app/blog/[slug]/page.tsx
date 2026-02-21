@@ -1,5 +1,5 @@
 import BlogContent from '@/components/blog-details/BlogContent';
-import { defaultMetadata } from '@/utils/generateMetaData';
+import { generateMetadata as generateMetadataUtil } from '@/utils/generateMetaData';
 import getMarkDownContent from '@/utils/getMarkDownContent';
 import getMarkDownData from '@/utils/getMarkDownData';
 import { Metadata } from 'next';
@@ -11,10 +11,16 @@ export async function generateStaticParams() {
   }));
 }
 
-export const metadata: Metadata = {
-  ...defaultMetadata,
-  title: 'Blog Details - SequenceFlow',
-};
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const slug = (await params).slug;
+  const blog = getMarkDownContent('src/data/blogs/', slug);
+  return generateMetadataUtil(
+    blog.data.title as string,
+    blog.data.description as string,
+    `https://sequenceflow.nl/blog/${slug}`,
+    blog.data.thumbnail as string,
+  );
+}
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
   const slug = (await params).slug;
