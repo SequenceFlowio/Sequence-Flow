@@ -21,7 +21,7 @@ const Contents = ({ slug }: { slug: string }) => {
             </RevealAnimation>
 
             {/* user review  */}
-            <UserReview service={service.data as IService} />
+            {(service.data as IService).userReview && <UserReview service={service.data as IService} />}
           </div>
 
           {/* Table of Contents */}

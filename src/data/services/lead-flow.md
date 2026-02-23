@@ -1,22 +1,17 @@
 ---
 title: 'Lead Flow'
 description: 'Automatiseer uw volledige lead generatie en outreach met AI-gestuurde workflows die prospects identificeren, benaderen en opvolgen.'
-image: '/images/autonome-outreach.webp'
+image: '/images/oplossingen-lead-flow-1.webp'
 imgAlt: 'Lead Flow'
 icon: 'ns-shape-26'
 showHomePage: false
-userReview:
-  name: 'Emma de Groot'
-  image: '/images/ns-avatar-12.png'
-  reviewContent: 'Met Lead Flow bereiken we nu 10x meer prospects dan voorheen. De AI-gestuurde outreach voelt persoonlijk en levert consistent gekwalificeerde leads op.'
-  userRole: 'Marketing Manager, BrandBoost'
 ---
 
 ## Automatiseer uw volledige lead pipeline
 
 Onze **Lead Flow** combineert autonome outreach, smart lead scoring en geautomatiseerde follow-ups in één krachtige workflow. Van het identificeren van prospects tot het boeken van afspraken — alles draait automatisch.
 
-![Service images](/images/ns-img-397.png)
+![Service images](/images/oplossingen-lead-flow-1.webp)
 
 ## Wat is inbegrepen
 
@@ -29,7 +24,7 @@ Elke stap in uw lead generatie wordt geautomatiseerd, van eerste contact tot gek
 - **CRM Sync** – Alle interacties worden real-time gesynchroniseerd met uw CRM.
 - **Performance dashboard** – Real-time inzicht in open rates, responses en conversies.
 
-![Service images](/images/ns-img-398.png)
+![Service images](/images/oplossingen-lead-flow-2.webp)
 
 ## Toepassingen
 
@@ -41,7 +36,7 @@ Perfect voor sales teams die hun bereik willen vergroten zonder extra personeel.
 - **Event promotie** – Nodig relevante prospects uit voor uw events.
 - **Account-based marketing** – Gerichte campagnes voor high-value accounts.
 
-![Service images](/images/ns-img-dark-217.jpg)
+![Service images](/images/oplossingen-lead-flow-3.webp)
 
 ## Schaalbaarheid en controle
 

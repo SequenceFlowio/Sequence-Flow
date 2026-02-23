@@ -41,7 +41,7 @@ const TableOfContent = ({ markdownContent }: TableOfContentProps) => {
     <RevealAnimation delay={0.3}>
       <div className="table-of-contents hidden w-full lg:sticky lg:top-20 lg:block lg:max-w-[449px]">
         <div className="bg-background-1 dark:bg-background-6 w-full space-y-4 rounded-[20px] p-11">
-          <h3 className="text-heading-5">Table of Contents</h3>
+          <h3 className="text-heading-5">Inhoudsopgave</h3>
           <ul className="table-of-list w-full">
             {tocItems.map((item, index) => {
               const isActive = activeSection === item.id;
