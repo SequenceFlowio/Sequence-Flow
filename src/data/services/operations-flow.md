@@ -1,7 +1,7 @@
 ---
 title: 'Operations Flow'
 description: 'Automatiseer uw interne bedrijfsprocessen met AI die administratie, rapportage en CRM-synchronisatie overneemt.'
-image: '/images/automatische-rapportage.webp'
+image: '/images/oplossingen-operations-flow-1.webp'
 imgAlt: 'Operations Flow'
 icon: 'ns-shape-28'
 showHomePage: false
@@ -11,7 +11,7 @@ showHomePage: false
 
 Onze **Operations Flow** combineert CRM-synchronisatie, automatische rapportage en administratie-automatisering in één gestroomlijnde workflow. Geen handmatig datawerk meer — alles draait automatisch op de achtergrond.
 
-![Service images](/images/ns-img-397.png)
+![Service images](/images/oplossingen-operations-flow-1.webp)
 
 ## Wat is inbegrepen
 
@@ -24,7 +24,7 @@ Van data-invoer tot management rapportages — elk intern proces wordt geautomat
 - **Workflow orchestratie** – Complexe processen met meerdere stappen en goedkeuringen geautomatiseerd.
 - **Integratie hub** – Koppel al uw tools naadloos aan elkaar zonder handmatig werk.
 
-![Service images](/images/ns-img-398.png)
+![Service images](/images/oplossingen-operations-flow-2.webp)
 
 ## Toepassingen
 
@@ -36,7 +36,7 @@ Perfect voor bedrijven die hun operationele efficiëntie willen maximaliseren.
 - **Marketing** – Campagne rapportages en ROI-analyses automatisch gegenereerd.
 - **Management** – Real-time dashboards en KPI-tracking zonder handmatig werk.
 
-![Service images](/images/ns-img-dark-217.jpg)
+![Service images](/images/oplossingen-operations-flow-3.webp)
 
 ## Schaalbaarheid en controle
 
