@@ -4,7 +4,7 @@ export const DEFAULT_URL = 'https://sequenceflow.io/';
 export const DEFAULT_TITLE = 'SequenceFlow - Flow-as-a-Service | Autonome Workflows voor Bedrijfsgroei';
 export const DEFAULT_DESCRIPTION =
   'SequenceFlow bouwt, implementeert en beheert intelligente, autonome bedrijfsprocessen die menselijke handelingen vervangen door AI-gestuurde logica. Ontdek onze Lead Flow, Support Flow en Operations Flow oplossingen.';
-export const DEFAULT_IMAGE_URL = 'https://sequenceflow.io/og-image.webp';
+export const DEFAULT_IMAGE_URL = 'https://sequenceflow.io/og-image.jpg';
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
