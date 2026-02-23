@@ -5,11 +5,6 @@ image: '/images/automatische-rapportage.webp'
 imgAlt: 'Operations Flow'
 icon: 'ns-shape-28'
 showHomePage: false
-userReview:
-  name: 'Mark van den Berg'
-  image: '/images/ns-avatar-15.png'
-  reviewContent: 'Operations Flow bespaart ons team meer dan 30 uur per week aan administratieve taken. De automatische rapportages geven ons real-time inzicht zonder handmatig werk.'
-  userRole: 'Operations Director, ScaleUp BV'
 ---
 
 ## Uw back-office op de automatische piloot

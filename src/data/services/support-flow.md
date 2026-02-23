@@ -1,22 +1,17 @@
 ---
 title: 'Support Flow'
 description: 'Automatiseer uw klantenservice met AI die vragen beantwoordt, tickets routeert en klanten 24/7 helpt zonder wachttijden.'
-image: '/images/ai-first-line-support.webp'
+image: '/images/oplossingen-support-flow-1.webp'
 imgAlt: 'Support Flow'
 icon: 'ns-shape-33'
 showHomePage: false
-userReview:
-  name: 'Sophie Jansen'
-  image: '/images/ns-avatar-19.png'
-  reviewContent: 'Support Flow heeft onze responstijd van uren naar seconden teruggebracht. Klanten krijgen direct antwoord en ons team kan zich focussen op complexe vraagstukken.'
-  userRole: 'Customer Success Manager, TechScale'
 ---
 
 ## Klantenservice die nooit slaapt
 
 Onze **Support Flow** combineert AI first-line support, intelligent ticket routing en geautomatiseerde FAQ-afhandeling in één naadloze workflow. Klanten krijgen direct antwoord, en uw team wordt alleen ingeschakeld wanneer het echt nodig is.
 
-![Service images](/images/ns-img-397.png)
+![Service images](/images/oplossingen-support-flow-1.webp)
 
 ## Wat is inbegrepen
 
@@ -29,7 +24,7 @@ Van eerste klantcontact tot escalatie — elke stap in uw supportproces wordt in
 - **Multi-channel inbox** – E-mail, chat en social media berichten in één overzicht.
 - **Rapportage dashboard** – Inzicht in responstijden, klanttevredenheid en veelvoorkomende issues.
 
-![Service images](/images/ns-img-398.png)
+![Service images](/images/oplossingen-support-flow-2.webp)
 
 ## Toepassingen
 
@@ -41,7 +36,7 @@ Ideaal voor bedrijven die hun klanttevredenheid willen verhogen terwijl ze suppo
 - **Zorg** – Afspraakbeheer en informatieverstrekking geautomatiseerd.
 - **Interne helpdesk** – IT-support en HR-vragen automatisch afgehandeld.
 
-![Service images](/images/ns-img-dark-217.jpg)
+![Service images](/images/oplossingen-support-flow-3.webp)
 
 ## Schaalbaarheid en controle
 
