@@ -11,11 +11,21 @@ export const mobileMenuData: MobileMenuGroup[] = [
     ],
   },
   {
-    id: 'menu',
-    title: 'Menu',
-    submenu: [
-      { id: 'how-we-work', label: 'Hoe wij werken', href: '/hoe-wij-werken' },
-      { id: 'blog', label: 'Blog', href: '/blog' },
-    ],
+    id: 'hoe-wij-werken',
+    title: 'Hoe wij werken',
+    href: '/hoe-wij-werken',
+    submenu: [],
+  },
+  {
+    id: 'blog',
+    title: 'Blog',
+    href: '/blog',
+    submenu: [],
+  },
+  {
+    id: 'contact',
+    title: 'Contact',
+    href: '/contact-us',
+    submenu: [],
   },
 ];

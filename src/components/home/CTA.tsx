@@ -19,8 +19,8 @@ const CTA = () => {
             </RevealAnimation>
             <RevealAnimation delay={0.5} direction="left" offset={50}>
               <div className="group w-[90%] list-none sm:w-auto">
-                <LinkButton href="/pricing" btnClass="btn-xl-v2 btn-ash-v2 !border-0 group-hover/btn-v2:btn-secondary-v2">
-                  Bekijk prijzen
+                <LinkButton href="/oplossingen" btnClass="btn-xl-v2 btn-ash-v2 !border-0 group-hover/btn-v2:btn-secondary-v2">
+                  Bekijk oplossingen
                 </LinkButton>
               </div>
             </RevealAnimation>
