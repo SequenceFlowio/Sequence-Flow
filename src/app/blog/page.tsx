@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 const page = () => {
   return (
     <main className="bg-background-4 dark:bg-background-9">
-      <FeaturedBlog />
+      {/* <FeaturedBlog /> */}
       <BlogShowcase />
     </main>
   );
