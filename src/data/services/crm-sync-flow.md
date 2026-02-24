@@ -1,7 +1,7 @@
 ---
 title: 'CRM-Sync Flow'
 description: 'Zorgen dat data tussen pakketten zoals Exact, AFAS en uw CRM altijd 100% gelijk loopt.'
-image: '/images/crm-sync-flow.webp'
+image: '/images/crm-flow-image-content.webp'
 imgAlt: 'CRM-Sync Flow'
 icon: 'ns-shape-31'
 showHomePage: true
