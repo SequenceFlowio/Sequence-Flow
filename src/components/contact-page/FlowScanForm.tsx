@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-const WEBHOOK_URL = 'PLACEHOLDER_WEBHOOK_URL';
+const WEBHOOK_URL = 'https://n8n.sequenceflow.io/webhook/flow-scan';
 
 const SECTORS = [
   'E-commerce',
@@ -13,7 +13,7 @@ const SECTORS = [
   'Anders',
 ];
 
-const MEDEWERKERS_OPTIONS = ['10–20', '20–50', '50–100'];
+const MEDEWERKERS_OPTIONS = ['1–10', '10–50', '50–100'];
 
 const PIJNPUNTEN = [
   'Handmatige dataverwerking',
@@ -59,6 +59,7 @@ const FlowScanForm = () => {
 
   // Step 1
   const [bedrijfsnaam, setBedrijfsnaam] = useState('');
+  const [website, setWebsite] = useState('');
   const [sector, setSector] = useState('');
   const [medewerkers, setMedewerkers] = useState('');
 
@@ -76,6 +77,11 @@ const FlowScanForm = () => {
 
     if (currentStep === 1) {
       if (!bedrijfsnaam.trim()) newErrors.bedrijfsnaam = 'Bedrijfsnaam is verplicht';
+      if (!website.trim()) {
+        newErrors.website = 'Website-URL is verplicht';
+      } else if (!/^https?:\/\/.+\..+/.test(website.trim())) {
+        newErrors.website = 'Voer een geldig URL in (bijv. https://uwbedrijf.nl)';
+      }
       if (!sector) newErrors.sector = 'Selecteer een sector';
       if (!medewerkers) newErrors.medewerkers = 'Selecteer het aantal medewerkers';
     }
@@ -123,7 +129,7 @@ const FlowScanForm = () => {
       await fetch(WEBHOOK_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ bedrijfsnaam, sector, medewerkers, pijnpunten, urgentie, voornaam, email, telefoon }),
+        body: JSON.stringify({ bedrijfsnaam, website, sector, medewerkers, pijnpunten, urgentie, voornaam, email, telefoon }),
       });
     } catch (_) {
       // fail silently
@@ -207,6 +213,23 @@ const FlowScanForm = () => {
                         {errors.bedrijfsnaam && (
                           <p className="text-tagline-3 mt-1 text-red-500">{errors.bedrijfsnaam}</p>
                         )}
+                      </div>
+
+                      {/* Website */}
+                      <div>
+                        <label htmlFor="website" className={LABEL_CLASS}>
+                          Website URL
+                        </label>
+                        <input
+                          id="website"
+                          type="url"
+                          placeholder="https://uwbedrijf.nl"
+                          value={website}
+                          onChange={(e) => setWebsite(e.target.value)}
+                          autoComplete="url"
+                          className={INPUT_CLASS}
+                        />
+                        {errors.website && <p className="text-tagline-3 mt-1 text-red-500">{errors.website}</p>}
                       </div>
 
                       {/* Sector */}
