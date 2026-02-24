@@ -25,7 +25,7 @@ export const mobileMenuData: MobileMenuGroup[] = [
   {
     id: 'contact',
     title: 'Contact',
-    href: '/contact-us',
+    href: '/contact',
     submenu: [],
   },
 ];

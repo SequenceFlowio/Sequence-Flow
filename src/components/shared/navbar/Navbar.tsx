@@ -103,7 +103,7 @@ const Navbar = ({ showTopNav }: { showTopNav: boolean }) => {
               </ul>
             </nav>
             <div className="hidden items-center justify-center xl:flex">
-              <LinkButton href="/contact-us" btnClass="btn-md-v2 btn-primary-v2 border group-hover/btn-v2:btn-secondary-v2">
+              <LinkButton href="/contact" btnClass="btn-md-v2 btn-primary-v2 border group-hover/btn-v2:btn-secondary-v2">
                 Neem contact op
               </LinkButton>
             </div>

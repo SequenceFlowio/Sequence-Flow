@@ -1,18 +1,18 @@
-import ContactInfo from '@/components/contact-page/ContactInfo';
+import FlowScanForm from '@/components/contact-page/FlowScanForm';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Contact - SequenceFlow',
+  title: 'Gratis Flow Scan - SequenceFlow',
 };
 
-const ContactUs = () => {
+const ContactPage = () => {
   return (
     <main className="bg-background-3 dark:bg-background-7">
-      <ContactInfo />
+      <FlowScanForm />
     </main>
   );
 };
 
-export default ContactUs;
+export default ContactPage;
