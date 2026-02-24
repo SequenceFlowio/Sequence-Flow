@@ -9,7 +9,7 @@ const PrivacyverklaringContent = () => {
             <h2>Privacyverklaring</h2>
             <div className="space-y-4">
               <p>
-                SequenceFlow B.V. hecht grote waarde aan de privacy van haar klanten en bezoekers. In deze
+                SequenceFlow hecht grote waarde aan de privacy van haar klanten en bezoekers. In deze
                 Privacyverklaring leggen wij uit welke persoonsgegevens wij verzamelen, waarom, en hoe wij daarmee
                 omgaan. Wij handelen in overeenstemming met de Algemene Verordening Gegevensbescherming (AVG).
               </p>
@@ -22,7 +22,7 @@ const PrivacyverklaringContent = () => {
             <div className="space-y-6">
               <h3>1. Wie zijn wij?</h3>
               <p>
-                SequenceFlow B.V. is een Nederlandse onderneming gespecialiseerd in Flow-as-a-Service: het bouwen,
+                SequenceFlow is een Nederlandse onderneming gespecialiseerd in Flow-as-a-Service: het bouwen,
                 implementeren en beheren van autonome bedrijfsworkflows voor het MKB. Wij zijn de
                 verwerkingsverantwoordelijke voor de persoonsgegevens die via onze website en diensten worden verzameld.
               </p>

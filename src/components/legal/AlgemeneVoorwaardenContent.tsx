@@ -10,7 +10,7 @@ const AlgemeneVoorwaardenContent = () => {
             <div className="space-y-4">
               <p>
                 Deze Algemene Voorwaarden zijn van toepassing op alle diensten die worden aangeboden door{' '}
-                <strong className="text-secondary dark:text-accent font-medium">SequenceFlow B.V.</strong>, gevestigd in
+                <strong className="text-secondary dark:text-accent font-medium">SequenceFlow</strong>, gevestigd in
                 Nederland, ingeschreven bij de Kamer van Koophandel. Door gebruik te maken van onze diensten gaat u
                 akkoord met deze voorwaarden.
               </p>
@@ -23,7 +23,7 @@ const AlgemeneVoorwaardenContent = () => {
             <div className="space-y-6">
               <h3>1. Definities</h3>
               <ul>
-                <li><strong className="text-secondary dark:text-accent font-medium">SequenceFlow:</strong> SequenceFlow B.V., aanbieder van Flow-as-a-Service.</li>
+                <li><strong className="text-secondary dark:text-accent font-medium">SequenceFlow:</strong> SequenceFlow, aanbieder van Flow-as-a-Service.</li>
                 <li><strong className="text-secondary dark:text-accent font-medium">Klant:</strong> de rechtspersoon of natuurlijk persoon die een overeenkomst sluit met SequenceFlow.</li>
                 <li><strong className="text-secondary dark:text-accent font-medium">Flow:</strong> een autonome, geautomatiseerde workflow die SequenceFlow bouwt, implementeert en beheert.</li>
                 <li><strong className="text-secondary dark:text-accent font-medium">Flow-as-a-Service (FaaS):</strong> het servicemodel waarbij SequenceFlow flows op abonnementsbasis levert.</li>
@@ -109,7 +109,7 @@ const AlgemeneVoorwaardenContent = () => {
               <h3>7. Intellectueel eigendom</h3>
               <p>
                 Alle door SequenceFlow ontwikkelde workflows, logica, configuraties en documentatie blijven intellectueel
-                eigendom van SequenceFlow B.V. De klant ontvangt een niet-exclusief, niet-overdraagbaar gebruiksrecht
+                eigendom van SequenceFlow De klant ontvangt een niet-exclusief, niet-overdraagbaar gebruiksrecht
                 voor de duur van het abonnement.
               </p>
               <p>
@@ -134,7 +134,7 @@ const AlgemeneVoorwaardenContent = () => {
               <p>
                 Op alle overeenkomsten tussen SequenceFlow en de klant is Nederlands recht van toepassing. Geschillen
                 worden in eerste instantie geprobeerd op te lossen door overleg. Indien dit niet lukt, worden geschillen
-                voorgelegd aan de bevoegde rechtbank in het arrondissement waar SequenceFlow B.V. is gevestigd.
+                voorgelegd aan de bevoegde rechtbank in het arrondissement waar SequenceFlow is gevestigd.
               </p>
             </div>
           </RevealAnimation>
