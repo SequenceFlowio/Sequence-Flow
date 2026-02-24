@@ -1,10 +1,3 @@
-import avatar4 from '@public/images/ns-avatar-4.png';
-import avatar5 from '@public/images/ns-avatar-5.png';
-import avatar6 from '@public/images/ns-avatar-6.png';
-import avatar7 from '@public/images/ns-avatar-7.png';
-import avatar8 from '@public/images/ns-avatar-8.png';
-import avatar9 from '@public/images/ns-avatar-9.png';
-import Image, { StaticImageData } from 'next/image';
 import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 
@@ -14,92 +7,57 @@ type Testimonial = {
   quote: string;
   twitterUrl: string;
   delay: number;
-  avatar: {
-    src: StaticImageData | string;
-    alt: string;
-    bgClass: string;
-  };
 };
 
 // data
 const testimonials: Testimonial[] = [
   {
     name: 'Mark de Vries',
-    role: 'CEO, TechStart B.V.',
+    role: 'CEO',
     quote:
       'Dankzij SequenceFlow hebben we onze lead opvolging volledig geautomatiseerd. We missen geen enkele kans meer en onze conversie is met 40% gestegen.',
     twitterUrl: 'https://x.com',
     delay: 0.2,
-    avatar: {
-      src: avatar4,
-      alt: "Mark de Vries's avatar",
-      bgClass: 'bg-linear-[156deg,#F4F8E7_12.92%,#D485FF_91%]',
-    },
   },
   {
     name: 'Sophie Jansen',
-    role: 'Operations Manager, GrowthHub',
+    role: 'Operations Manager',
     quote:
       'De Admin-Killer flow bespaart ons team minimaal 20 uur per week. Facturen, contracten en rapportages gaan nu volledig automatisch.',
     twitterUrl: 'https://x.com',
     delay: 0.3,
-    avatar: {
-      src: avatar5,
-      alt: "Sophie Jansen's avatar",
-      bgClass: 'bg-linear-[156deg,#E8F4FD_12.92%,#4A90E2_91%]',
-    },
   },
   {
     name: 'Thomas Bakker',
-    role: 'Founder, ScaleUp Agency',
+    role: 'Founder',
     quote:
       'Onze klanten worden nu binnen minuten geholpen via de AI First-Line Support. De klanttevredenheid is door het dak gegaan.',
     twitterUrl: 'https://x.com',
     delay: 0.4,
-    avatar: {
-      src: avatar6,
-      alt: "Thomas Bakker's avatar",
-      bgClass: 'bg-linear-[156deg,#FFF2E8_12.92%,#FF6B35_91%]',
-    },
   },
   {
     name: 'Lisa van den Berg',
-    role: 'Sales Director, Nexus Solutions',
+    role: 'Sales Director',
     quote:
       'De Smart Lead Scoring heeft onze sales pipeline getransformeerd. We focussen nu alleen nog op de leads die er echt toe doen.',
     twitterUrl: 'https://x.com',
     delay: 0.1,
-    avatar: {
-      src: avatar7,
-      alt: "Lisa van den Berg's avatar",
-      bgClass: 'bg-linear-[156deg,#F0E6FF_12.92%,#8B5CF6_91%]',
-    },
   },
   {
     name: 'Pieter Vermeer',
-    role: 'CFO, DataFlow B.V.',
+    role: 'CFO',
     quote:
       'De CRM-Sync Flow zorgt ervoor dat onze data tussen Exact en ons CRM altijd 100% klopt. Geen handmatige invoer meer, geen fouten.',
     twitterUrl: 'https://x.com',
     delay: 0.2,
-    avatar: {
-      src: avatar8,
-      alt: "Pieter Vermeer's avatar",
-      bgClass: 'bg-linear-[156deg,#E6F7FF_12.92%,#1890FF_91%]',
-    },
   },
   {
     name: 'Emma de Groot',
-    role: 'Marketing Manager, BrandBoost',
+    role: 'Marketing Manager',
     quote:
       'Met de Autonome Outreach bereiken we nu 10x meer prospects dan voorheen. En het mooiste: het voelt persoonlijk en authentiek.',
     twitterUrl: 'https://x.com',
     delay: 0.3,
-    avatar: {
-      src: avatar9,
-      alt: "Emma de Groot's avatar",
-      bgClass: 'bg-linear-[156deg,#FFF7E6_12.92%,#FF8C00_91%]',
-    },
   },
 ];
 
@@ -140,7 +98,7 @@ const Testimonial = () => {
                     ))}
                   </figure>
 
-                  <Link href={t.twitterUrl} target="_blank" rel="noopener" aria-label={`Volg ${t.name} op Twitter`}>
+                  <Link href={t.twitterUrl} target="_blank" rel="noopener" aria-label={`Volg ${t.name} op Twitter`} className="hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" width={25} height={24} viewBox="0 0 25 24" fill="none">
                       <path
                         d="M17.8441 4.24219H20.6042L14.5741 11.0196L21.668 20.2422H16.1136L11.7631 14.6488L6.7852 20.2422H4.02341L10.4731 12.993L3.66797 4.24219H9.36342L13.2959 9.35481L17.8441 4.24219ZM16.8753 18.6176H18.4048L8.53238 5.78147H6.89117L16.8753 18.6176Z"
@@ -152,20 +110,10 @@ const Testimonial = () => {
 
                 <p className="pb-6">{t.quote}</p>
 
-                <figure className="flex items-center gap-3">
-                  <Image
-                    src={t.avatar.src}
-                    className={`size-11 rounded-full object-cover object-center ${t.avatar.bgClass}`}
-                    alt={t.avatar.alt}
-                    width={44}
-                    height={44}
-                    loading="lazy"
-                  />
-                  <div>
-                    <h3 className="text-tagline-1 leading-[1.5] font-semibold sm:text-lg">{t.name}</h3>
-                    <p className="text-tagline-2 text-secondary/60">{t.role}</p>
-                  </div>
-                </figure>
+                <div>
+                  <h3 className="text-tagline-1 leading-[1.5] font-semibold sm:text-lg">{t.name}</h3>
+                  <p className="text-tagline-2 text-secondary/60">{t.role}</p>
+                </div>
               </article>
             </RevealAnimation>
           ))}

@@ -2,6 +2,7 @@ import matter from 'gray-matter';
 import Image, { StaticImageData } from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 import RevealAnimation from '../animation/RevealAnimation';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import ShareLink from './ShareLink';
@@ -62,7 +63,7 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
         {/* Blog details-body */}
         <RevealAnimation delay={0.5}>
           <article className="details-body">
-            <ReactMarkdown rehypePlugins={[[rehypeSlug]]}>{blog.content}</ReactMarkdown>
+            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[[rehypeSlug]]}>{blog.content}</ReactMarkdown>
           </article>
         </RevealAnimation>
 
