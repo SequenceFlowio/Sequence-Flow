@@ -15,6 +15,7 @@ const flowItemsBottom = [
   { id: 1, name: 'FAQ' },
   { id: 2, name: 'E-mails reply' },
   { id: 3, name: 'Rapportage' },
+  { id: 4, name: 'CRM Sync' },
 ];
 
 const Features = () => {
