@@ -44,7 +44,7 @@ const URGENTIE_OPTIONS = [
   },
 ];
 
-const STEP_TITLES = ['Vertel over je bedrijf', 'Waar zit de pijn?', 'Bijna klaar'];
+const STEP_TITLES = ['Vertel over uw bedrijf', 'Waar zit de pijn?', 'Bijna klaar'];
 
 const INPUT_CLASS =
   'dark:focus-visible:border-stroke-4/20 dark:border-stroke-7 dark:bg-background-6 border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/60 focus:border-secondary placeholder:text-tagline-2 dark:placeholder:text-accent/60 dark:text-accent h-[48px] w-full rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus:outline-none xl:h-[41px]';
@@ -147,12 +147,12 @@ const FlowScanForm = () => {
           {/* Heading */}
           <div className="mx-auto max-w-[640px] space-y-3 text-center">
             <h1>Gratis Flow Scan</h1>
-            <p>Ontdek in 30 minuten hoeveel tijd je bedrijf verliest aan handmatig werk.</p>
+            <p>Ontdek in 30 minuten hoeveel tijd uw bedrijf verliest aan handmatig werk.</p>
           </div>
 
           {/* Social proof */}
           <p className="text-tagline-2 text-secondary/50 dark:text-accent/50 text-center font-normal">
-            Al 40+ MKB-bedrijven gingen je voor
+            Al 40+ MKB-bedrijven gingen u voor
           </p>
 
           {/* Form card */}
@@ -175,7 +175,7 @@ const FlowScanForm = () => {
                   <div className="space-y-2">
                     <h3 className="text-heading-5">Goed bezig, {voornaam}.</h3>
                     <p className="text-secondary/60 dark:text-accent/60 mx-auto max-w-sm">
-                      We nemen vandaag nog contact met je op.
+                      We nemen vandaag nog contact met u op.
                     </p>
                   </div>
                 </div>
@@ -304,7 +304,7 @@ const FlowScanForm = () => {
                       {/* Pijnpunten */}
                       <div>
                         <p className={LABEL_CLASS}>
-                          Wat kost jullie de meeste tijd?{' '}
+                          Wat kost u de meeste tijd?{' '}
                           <span className="text-secondary/40 dark:text-accent/40 font-normal">(max. 2)</span>
                         </p>
                         <div className="space-y-3">

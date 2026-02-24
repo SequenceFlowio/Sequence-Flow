@@ -36,7 +36,7 @@ const Hero = () => {
               <RevealAnimation delay={0.5} direction="left" instant offset={50}>
                 <div>
                   <LinkButton href="/contact" btnClass="btn-xl-v2 btn-v2-white group-hover/btn-v2:btn-secondary-v2">
-                    Start je Flow Scan
+                    Start uw Flow Scan
                   </LinkButton>
                 </div>
               </RevealAnimation>

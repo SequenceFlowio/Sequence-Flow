@@ -104,7 +104,7 @@ const Navbar = ({ showTopNav }: { showTopNav: boolean }) => {
             </nav>
             <div className="hidden items-center justify-center xl:flex">
               <LinkButton href="/contact" btnClass="btn-md-v2 btn-primary-v2 border group-hover/btn-v2:btn-secondary-v2">
-                Start je Flow Scan
+                Start uw Flow Scan
               </LinkButton>
             </div>
             <MobileMenuButton />

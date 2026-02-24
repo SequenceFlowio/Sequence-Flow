@@ -13,7 +13,7 @@ export const faqData = [
   },
   {
     id: 3,
-    question: 'Welke systemen kunnen jullie integreren?',
+    question: 'Welke systemen kunt u integreren?',
     answer:
       'Wij integreren met vrijwel alle gangbare bedrijfssoftware, waaronder Exact, AFAS, Salesforce, HubSpot, LinkedIn, WhatsApp Business, Slack, Gmail, en vele anderen. Heeft u een specifiek systeem? Neem contact op en we bekijken de mogelijkheden.',
   },

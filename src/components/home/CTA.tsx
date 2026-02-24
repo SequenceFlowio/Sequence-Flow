@@ -13,7 +13,7 @@ const CTA = () => {
             <RevealAnimation delay={0.4} direction="left" offset={50}>
               <div className="group w-[90%] list-none sm:w-auto">
                 <LinkButton href="/contact" btnClass="btn-xl-v2 btn-secondary-v2 group-hover/btn-v2:btn-primary-v2">
-                  Start je Flow Scan
+                  Start uw Flow Scan
                 </LinkButton>
               </div>
             </RevealAnimation>

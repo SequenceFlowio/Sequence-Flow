@@ -4,7 +4,7 @@ author: SequenceFlow Redactie
 authorImage: /images/sequenceflow-avatar.png
 publishDate: 21 feb 2026
 title: "Waarom 2026 het jaar wordt van autonome workflows (en hoe Nederland voorop loopt)"
-description: "De verschuiving van praten met AI naar AI die voor je werkt is definitief ingezet. Nederlandse MKB-bedrijven staan op een kantelpunt."
+description: "De verschuiving van praten met AI naar AI die voor u werkt is definitief ingezet. Nederlandse MKB-bedrijven staan op een kantelpunt."
 thumbnail: /images/blog-autonome-workflows-banner.jpg
 readTime: 8 min lezen
 faq:
@@ -20,7 +20,7 @@ faq:
     answer: In de meeste gevallen ja. Autonome workflows koppelen aan gangbare Nederlandse business-software zoals Exact Online, AFAS, Teamleader, HubSpot, Microsoft 365 en Google Workspace via API-koppelingen. In een intakegesprek brengen we uw techstack in kaart en bepalen we de integratieaanpak.
 ---
 
-> **In het kort:** De verschuiving van *praten met AI* naar *AI die voor je werkt* is definitief ingezet. Niet langer vraagt u een chatbot om een e-mail te schrijven — nu handelt een AI-agent zelfstandig uw leadopvolging, CRM-synchronisatie en klantenservice af. 2026 is het jaar waarin Nederlandse bedrijven dit omslagpunt voelen.
+> **In het kort:** De verschuiving van *praten met AI* naar *AI die voor u werkt* is definitief ingezet. Niet langer vraagt u een chatbot om een e-mail te schrijven — nu handelt een AI-agent zelfstandig uw leadopvolging, CRM-synchronisatie en klantenservice af. 2026 is het jaar waarin Nederlandse bedrijven dit omslagpunt voelen.
 
 ---
 

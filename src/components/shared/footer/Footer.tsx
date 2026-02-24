@@ -42,7 +42,7 @@ const Footer = ({ className }: { className?: string }) => {
               <Link
                 href="/contact"
                 className="btn btn-xl btn-primary first-letter:uppercase">
-                <span>Start je Flow Scan</span>
+                <span>Start uw Flow Scan</span>
               </Link>
             </div>
           </div>
