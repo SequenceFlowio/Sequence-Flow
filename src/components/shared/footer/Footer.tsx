@@ -11,7 +11,6 @@ import logoWit from '@/components/content/sequenceflow-logo-wit.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterDivider from './FooterDivider';
-import CtaInputForm from '../cta/CtaInputForm';
 
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sequenceflow', icon: linkedin, sizeClass: 'size-6' },
@@ -36,11 +35,15 @@ const Footer = ({ className }: { className?: string }) => {
               <span className="badge !badge-green">Start vandaag</span>
               <h2 className="md:text-heading-2 text-heading-5 text-accent">Klaar om te automatiseren?</h2>
               <p className="text-accent/60">
-                Laat uw e-mailadres achter en wij nemen contact met u op voor een vrijblijvend gesprek.
+                Ontdek in 30 minuten hoeveel tijd uw bedrijf verliest aan handmatig werk.
               </p>
             </div>
-            <div className="w-full max-w-[562px] lg:pl-9">
-              <CtaInputForm ctaBtnText="Verstuur" placeholder="Vul uw e-mailadres in" inputFieldClass="!border-accent/20 !text-accent placeholder:!text-white" noAnimation />
+            <div className="flex justify-center xl:justify-start">
+              <Link
+                href="/contact"
+                className="btn btn-xl btn-primary first-letter:uppercase">
+                <span>Start je Flow Scan</span>
+              </Link>
             </div>
           </div>
         </div>

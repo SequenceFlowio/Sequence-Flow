@@ -1,11 +1,5 @@
 'use client';
 
-import homeIcon from '@public/images/icons/home.svg';
-import mailIcon from '@public/images/icons/mail-open.svg';
-import gradientTwo from '@public/images/ns-img-509.png';
-import gradientOne from '@public/images/ns-img-510.png';
-import Image from 'next/image';
-import Link from 'next/link';
 import { useState } from 'react';
 
 const WEBHOOK_URL = 'PLACEHOLDER_WEBHOOK_URL';
@@ -51,26 +45,6 @@ const URGENTIE_OPTIONS = [
 ];
 
 const STEP_TITLES = ['Vertel over je bedrijf', 'Waar zit de pijn?', 'Bijna klaar'];
-
-const contactInfoItems = [
-  {
-    id: 1,
-    icon: homeIcon,
-    title: 'Locatie',
-    content: 'Amsterdam, Nederland',
-    gradient: gradientOne,
-    gradientClass: 'top-[-187px] left-[174px] -rotate-[78deg]',
-  },
-  {
-    id: 2,
-    icon: mailIcon,
-    title: 'E-mail',
-    content: 'hello@sequenceflow.io',
-    link: 'mailto:hello@sequenceflow.io',
-    gradient: gradientTwo,
-    gradientClass: 'top-[-206px] left-[-36px] rotate-[62deg]',
-  },
-];
 
 const INPUT_CLASS =
   'dark:focus-visible:border-stroke-4/20 dark:border-stroke-7 dark:bg-background-6 border-stroke-3 bg-background-1 text-tagline-2 placeholder:text-secondary/60 focus:border-secondary placeholder:text-tagline-2 dark:placeholder:text-accent/60 dark:text-accent h-[48px] w-full rounded-full border px-[18px] py-3 font-normal placeholder:font-normal focus:outline-none xl:h-[41px]';
@@ -163,46 +137,21 @@ const FlowScanForm = () => {
       className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-20 xl:pt-[180px] xl:pb-[100px]"
       aria-label="Gratis Flow Scan">
       <div className="main-container">
-        <div className="space-y-[70px]">
+        <div className="space-y-10">
           {/* Heading */}
-          <div className="mx-auto max-w-[680px] space-y-3 text-center">
-            <h2>Gratis Flow Scan</h2>
-            <p>
-              Beantwoord drie korte vragen en ontdek welke processen in jouw bedrijf het meeste tijd kosten — en hoe AI
-              dat oplost. Wij nemen vandaag nog contact met je op.
-            </p>
+          <div className="mx-auto max-w-[640px] space-y-3 text-center">
+            <h1>Gratis Flow Scan</h1>
+            <p>Ontdek in 30 minuten hoeveel tijd je bedrijf verliest aan handmatig werk.</p>
           </div>
 
-          <div className="flex flex-col items-center justify-center gap-10 lg:flex-row lg:items-start lg:gap-8 xl:gap-[70px]">
-            {/* Info cards */}
-            <div className="flex flex-col gap-8 md:flex-row lg:flex-col">
-              {contactInfoItems.map((item) => (
-                <div
-                  key={item.id}
-                  className="bg-secondary dark:bg-background-6 relative w-full space-y-6 overflow-hidden rounded-[20px] p-11 text-center md:max-w-[371px]">
-                  <figure
-                    className={`pointer-events-none absolute size-[350px] overflow-hidden select-none ${item.gradientClass}`}>
-                    <Image src={item.gradient} alt="Decorative gradient" className="size-full object-cover" />
-                  </figure>
-                  <figure className="mx-auto size-10 overflow-hidden">
-                    <Image src={item.icon} alt={`${item.title} icon`} className="size-full object-cover" />
-                  </figure>
-                  <div className="space-y-2.5">
-                    <p className="text-heading-6 text-accent">{item.title}</p>
-                    {item.link ? (
-                      <p className="text-accent/60">
-                        <Link href={item.link}>{item.content}</Link>
-                      </p>
-                    ) : (
-                      <p className="text-accent/60">{item.content}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Social proof */}
+          <p className="text-tagline-2 text-secondary/50 dark:text-accent/50 text-center font-normal">
+            Al 40+ MKB-bedrijven gingen je voor
+          </p>
 
-            {/* Form card */}
-            <div className="dark:bg-background-6 mx-auto w-full max-w-[847px] rounded-4xl bg-white p-6 md:p-8 lg:p-11">
+          {/* Form card */}
+          <div className="mx-auto w-full max-w-[600px]">
+            <div className="dark:bg-background-6 w-full rounded-4xl bg-white p-6 md:p-8 lg:p-11">
               {submitted ? (
                 /* Success state */
                 <div className="flex flex-col items-center justify-center gap-6 py-12 text-center">
