@@ -13,7 +13,7 @@ import Link from 'next/link';
 import FooterDivider from './FooterDivider';
 
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sequenceflow', icon: linkedin, sizeClass: 'size-6' },
+  { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sequenceflow-io/', icon: linkedin, sizeClass: 'size-6' },
   { name: 'X', href: 'https://x.com/SequenceFlow', icon: xTwitter, sizeClass: 'size-[18px]' },
   { name: 'TikTok', href: 'https://www.tiktok.com/@sequenceflowio', icon: tiktok, sizeClass: 'size-[18px]' },
   { name: 'Instagram', href: 'https://www.instagram.com/sequenceflow.io', icon: instagram, sizeClass: 'size-6' },
@@ -66,6 +66,11 @@ const Footer = ({ className }: { className?: string }) => {
                 </Link>
               ))}
             </div>
+            <Link
+              href="mailto:hallo@sequenceflow.io"
+              className="text-accent/60 text-tagline-2 mt-4 inline-block font-normal transition-opacity hover:opacity-100">
+              hallo@sequenceflow.io
+            </Link>
           </div>
           <div className="flex flex-wrap gap-x-16 gap-y-8">
             {footerLinks.map((group) => (

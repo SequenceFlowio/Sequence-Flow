@@ -79,8 +79,8 @@ const FlowScanForm = () => {
       if (!bedrijfsnaam.trim()) newErrors.bedrijfsnaam = 'Bedrijfsnaam is verplicht';
       if (!website.trim()) {
         newErrors.website = 'Website-URL is verplicht';
-      } else if (!/^https?:\/\/.+\..+/.test(website.trim())) {
-        newErrors.website = 'Voer een geldig URL in (bijv. https://uwbedrijf.nl)';
+      } else if (!/^(https?:\/\/)?([\w-]+\.)+[\w]{2,}(\/.*)?$/.test(website.trim())) {
+        newErrors.website = 'Voer een geldig URL in (bijv. uwbedrijf.nl)';
       }
       if (!sector) newErrors.sector = 'Selecteer een sector';
       if (!medewerkers) newErrors.medewerkers = 'Selecteer het aantal medewerkers';
