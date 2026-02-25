@@ -1,0 +1,27 @@
+# SequenceFlow
+
+SequenceFlow bouwt, implementeert en beheert autonome AI-workflows voor het MKB — ook wel Flow-as-a-Service (FaaS) genaamd.
+
+## Wat wij doen
+
+Wij vervangen repetitieve handmatige processen door intelligente, zelfstandig werkende AI flows. Denk aan: lead outreach, e-mailverwerking, CRM-synchronisatie, klantenservice automatisering en interne rapportage.
+
+## Oplossingen
+
+- Lead Flow: geautomatiseerde leadopvolging en outreach via e-mail en LinkedIn
+- Support Flow: autonome klantenservice en ticketverwerking
+- Operations Flow: interne procesautomatisering, CRM-sync en rapportage
+
+## Hoe wij werken
+
+Eenmalige Setup Fee voor de bouw van de flow, gevolgd door een maandelijks abonnement voor beheer, monitoring en optimalisatie (Flow-as-a-Service model). Geen grote IT-projecten, geen lange doorlooptijden.
+
+## Voor wie
+
+MKB-bedrijven (1–100 medewerkers) die tijd verliezen aan handmatige, repetitieve processen en willen groeien zonder extra personeel aan te nemen.
+
+## Contact
+
+Website: https://sequenceflow.io
+E-mail: hallo@sequenceflow.io
+LinkedIn: https://www.linkedin.com/company/sequenceflow-io/
