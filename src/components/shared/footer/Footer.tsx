@@ -35,7 +35,7 @@ const Footer = ({ className }: { className?: string }) => {
               <span className="badge !badge-green">Start vandaag</span>
               <h2 className="md:text-heading-2 text-heading-5 text-accent">Klaar om te automatiseren?</h2>
               <p className="text-accent/60">
-                Ontdek in 30 minuten hoeveel tijd uw bedrijf verliest aan handmatig werk.
+                Ontdek in 1 minuut hoeveel tijd uw bedrijf verliest aan handmatig werk.
               </p>
             </div>
             <div className="flex justify-center xl:justify-start">

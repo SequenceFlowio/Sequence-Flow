@@ -147,7 +147,7 @@ const FlowScanForm = () => {
           {/* Heading */}
           <div className="mx-auto max-w-[640px] space-y-3 text-center">
             <h1>Gratis Flow Scan</h1>
-            <p>Ontdek in 30 minuten hoeveel tijd uw bedrijf verliest aan handmatig werk.</p>
+            <p>Ontdek in 1 minuut hoeveel tijd uw bedrijf verliest aan handmatig werk.</p>
           </div>
 
           {/* Social proof */}
@@ -173,9 +173,12 @@ const FlowScanForm = () => {
                     </svg>
                   </div>
                   <div className="space-y-2">
-                    <h3 className="text-heading-5">Goed bezig, {voornaam}.</h3>
+                    <h3 className="text-heading-5">Bedankt, {voornaam}.</h3>
                     <p className="text-secondary/60 dark:text-accent/60 mx-auto max-w-sm">
-                      We nemen vandaag nog contact met u op.
+                      U ontvangt binnen 1 minuut een bevestigingsmail.
+                    </p>
+                    <p className="text-tagline-3 text-secondary/40 dark:text-accent/40 mx-auto max-w-sm">
+                      Controleer ook uw spam folder.
                     </p>
                   </div>
                 </div>
