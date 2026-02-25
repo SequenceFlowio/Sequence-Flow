@@ -1,27 +1,103 @@
-# SequenceFlow
+# SequenceFlow — Flow-as-a-Service voor het MKB
 
-SequenceFlow bouwt, implementeert en beheert autonome AI-workflows voor het MKB — ook wel Flow-as-a-Service (FaaS) genaamd.
-
-## Wat wij doen
-
-Wij vervangen repetitieve handmatige processen door intelligente, zelfstandig werkende AI flows. Denk aan: lead outreach, e-mailverwerking, CRM-synchronisatie, klantenservice automatisering en interne rapportage.
-
-## Oplossingen
-
-- Lead Flow: geautomatiseerde leadopvolging en outreach via e-mail en LinkedIn
-- Support Flow: autonome klantenservice en ticketverwerking
-- Operations Flow: interne procesautomatisering, CRM-sync en rapportage
-
-## Hoe wij werken
-
-Eenmalige Setup Fee voor de bouw van de flow, gevolgd door een maandelijks abonnement voor beheer, monitoring en optimalisatie (Flow-as-a-Service model). Geen grote IT-projecten, geen lange doorlooptijden.
-
-## Voor wie
-
-MKB-bedrijven (1–100 medewerkers) die tijd verliezen aan handmatige, repetitieve processen en willen groeien zonder extra personeel aan te nemen.
-
-## Contact
+SequenceFlow bouwt, implementeert en beheert autonome AI-workflows voor het MKB. Het model heet Flow-as-a-Service (FaaS): een eenmalige Setup Fee voor de bouw van een flow, gevolgd door een maandelijks abonnement voor onderhoud, monitoring en optimalisatie. Geen uurtje-factuurtje, maar resultaatgericht werken.
 
 Website: https://sequenceflow.io
 E-mail: hallo@sequenceflow.io
 LinkedIn: https://www.linkedin.com/company/sequenceflow-io/
+
+---
+
+## Wat is Flow-as-a-Service?
+
+Flow-as-a-Service is het model waarbij SequenceFlow complete, autonome workflows bouwt, implementeert en beheert voor uw bedrijf. Klanten betalen een vaste Setup Fee voor de bouw en een maandelijks abonnement voor onderhoud en optimalisatie. Geen grote IT-projecten, geen lange doorlooptijden. De meeste standaard flows zijn binnen 2-4 weken operationeel. Complexere maatwerkoplossingen duren 4-8 weken.
+
+---
+
+## Hoofddiensten (Flows)
+
+### Lead Flow
+Automatiseer de volledige lead generatie en outreach met AI-gestuurde workflows die prospects identificeren, benaderen en opvolgen. Inclusief: lead scoring, gepersonaliseerde outreach via e-mail en LinkedIn, automatische follow-up sequenties en CRM-integratie.
+
+### Support Flow
+Automatiseer de klantenservice met AI die vragen beantwoordt, tickets routeert en klanten 24/7 helpt zonder wachttijden. Inclusief: AI-chatbot integratie, ticketbeheer, escalatie naar menselijke agents en rapportage.
+
+### Operations Flow
+Automatiseer interne bedrijfsprocessen met AI die administratie, rapportage en CRM-synchronisatie overneemt. De back-office op de automatische piloot. Inclusief: procesautomatisering, CRM-sync, rapportage en documentbeheer.
+
+---
+
+## Losse Flow-modules (Oplossingen)
+
+### Admin-Killer
+Automatiseert repetitieve administratieve taken zoals factuurverwerking en contractgeneratie. Inclusief: factuurverwerking (automatisch inlezen, verwerken en boeken), contractgeneratie met klantdata, data entry automatisering, document routing, approval workflows en archivering. Toepassingen: finance, HR, sales, legal en operations. Klantreview: "De Admin-Killer flow bespaart ons team minimaal 20 uur per week."
+
+### Autonome Outreach
+AI die op LinkedIn en via e-mail prospects identificeert en persoonlijk benadert. Inclusief: prospect identificatie, gepersonaliseerde berichtgeving, multi-channel outreach en reactiedetectie. Schaalbaar van tientallen naar duizenden prospects per maand.
+
+### Follow-up Engine
+Automatische, intelligente opvolging van leads die nog niet hebben gereageerd zonder menselijke tussenkomst. Inclusief: timing-optimalisatie, gepersonaliseerde berichten per kanaal, reactiedetectie en automatische CRM-updates.
+
+### Smart Lead Scoring
+Een flow die binnenkomende leads automatisch kwalificeert en de warme leads direct in het CRM zet. Inclusief: gedragsanalyse, scoringmodellen op maat, automatische CRM-segmentatie en prioriteringslogica. Focus op leads die daadwerkelijk converteren.
+
+### AI First-Line Support
+Een flow die veelvoorkomende klantvragen direct beantwoordt via WhatsApp of chat, 24/7. Inclusief: kennisbank-integratie, meertalige ondersteuning, escalatie naar menselijke agents en continue verbetering op basis van interacties.
+
+### Intelligent Ticket Routing
+Automatisch categoriseren en toewijzen van complexe support-tickets naar de juiste persoon of afdeling. Inclusief: AI-categorisatie, prioriteitstoewijzing, skill-based routing en SLA-bewaking. Het systeem leert continu van nieuwe tickets.
+
+### CRM-Sync Flow
+Zorgt dat data tussen pakketten zoals Exact, AFAS en het CRM altijd 100% gelijk loopt. Inclusief: bidirectionele synchronisatie, conflictresolutie, foutlogging en ondersteuning voor Exact, AFAS, Salesforce, HubSpot en meer.
+
+### Automatische Rapportage
+Een flow die data uit verschillende bronnen verzamelt en wekelijks een kant-en-klaar dashboard of rapport stuurt. Inclusief: data-aggregatie uit meerdere bronnen, automatisch versturen via e-mail of Slack, en flexibele output (PDF, spreadsheet, dashboard).
+
+---
+
+## Integraties
+
+SequenceFlow integreert met vrijwel alle gangbare bedrijfssoftware, waaronder: Exact, AFAS, Salesforce, HubSpot, LinkedIn, WhatsApp Business, Slack, Gmail en vele anderen.
+
+---
+
+## Voor wie
+
+MKB-bedrijven met 1-100 medewerkers die tijd verliezen aan handmatige, repetitieve processen en willen groeien zonder extra personeel aan te nemen. Toepassingen in finance, HR, sales, legal, operations en klantenservice.
+
+---
+
+## Veelgestelde vragen
+
+**Hoe lang duurt implementatie?**
+Standaard flows: 2-4 weken. Maatwerk: 4-8 weken.
+
+**Welke systemen worden ondersteund?**
+Exact, AFAS, Salesforce, HubSpot, LinkedIn, WhatsApp Business, Slack, Gmail en meer.
+
+**Wat als een flow niet werkt zoals verwacht?**
+Alle flows worden continu gemonitord. Bij afwijkingen grijpt SequenceFlow direct in. Onderhoud en bugfixes zijn inbegrepen in het abonnement.
+
+**Kunnen flows meegroeien?**
+Ja. De engine schaalt moeiteloos van 100 naar 10.000+ acties per maand met slimme usage caps.
+
+**Is data veilig?**
+SequenceFlow werkt volgens AVG-richtlijnen, gebruikt versleutelde verbindingen en slaat geen onnodige data op.
+
+---
+
+## Blog & Kennisbank
+
+- "Hoeveel geld kost handmatige e-mailverwerking u per maand?" — Nederlandse MKB-bedrijven besteden gemiddeld 11 uur per week aan het handmatig verwerken van e-mail. We berekenen wat dat echt kost en hoe autonome flows dit elimineren.
+- "Waarom 2026 het jaar wordt van autonome workflows (en hoe Nederland voorop loopt)" — De verschuiving van praten met AI naar AI die voor u werkt is definitief ingezet. Nederlandse MKB-bedrijven staan op een kantelpunt.
+
+---
+
+## Juridisch
+
+- Algemene Voorwaarden: https://sequenceflow.io/algemene-voorwaarden
+- Privacyverklaring: https://sequenceflow.io/privacyverklaring
+- Verwerkersovereenkomst: https://sequenceflow.io/verwerkersovereenkomst
+- AI & Data Ethiek: https://sequenceflow.io/ai-data-ethiek
+- Service Level Agreement: https://sequenceflow.io/service-level-agreement
+- Acceptable Use Policy: https://sequenceflow.io/acceptable-use-policy
