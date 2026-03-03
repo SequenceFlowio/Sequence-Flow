@@ -71,6 +71,7 @@ const Footer = ({ className }: { className?: string }) => {
               className="text-accent/60 text-tagline-2 mt-4 inline-block font-normal transition-opacity hover:opacity-100">
               hallo@sequenceflow.io
             </Link>
+            <p className="text-accent/40 text-tagline-3 mt-2 font-normal">KvK: 78237750</p>
           </div>
           <div className="flex flex-wrap gap-x-16 gap-y-8">
             {footerLinks.map((group) => (
