@@ -2,7 +2,6 @@ import { footerLinks } from '@/data/footer-data';
 import { cn } from '@/utils/cn';
 import linkedin from '@public/images/icons/linkedin.svg';
 import xTwitter from '@public/images/icons/x-twitter.svg';
-import tiktok from '@public/images/icons/tiktok.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import facebook from '@public/images/icons/facebook.svg';
 import reddit from '@public/images/icons/reddit.svg';
@@ -15,7 +14,6 @@ import FooterDivider from './FooterDivider';
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/sequenceflow-io/', icon: linkedin, sizeClass: 'size-6' },
   { name: 'X', href: 'https://x.com/SequenceFlow', icon: xTwitter, sizeClass: 'size-[18px]' },
-  { name: 'TikTok', href: 'https://www.tiktok.com/@sequenceflowio', icon: tiktok, sizeClass: 'size-[18px]' },
   { name: 'Instagram', href: 'https://www.instagram.com/sequenceflow.io', icon: instagram, sizeClass: 'size-6' },
   { name: 'Facebook', href: 'https://www.facebook.com/sequenceflow', icon: facebook, sizeClass: 'size-6' },
   { name: 'Reddit', href: 'https://www.reddit.com/user/Sequenceflowio/', icon: reddit, sizeClass: 'size-6' },
