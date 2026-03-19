@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/acceptable-use-policy/page": "/acceptable-use-policy",
+  "/ai-data-ethiek/page": "/ai-data-ethiek",
+  "/algemene-voorwaarden/page": "/algemene-voorwaarden",
+  "/blog/[slug]/page": "/blog/[slug]",
+  "/blog/page": "/blog",
+  "/contact/page": "/contact",
+  "/hoe-wij-werken/page": "/hoe-wij-werken",
+  "/icon.png/route": "/icon.png",
+  "/oplossingen/[slug]/page": "/oplossingen/[slug]",
+  "/oplossingen/page": "/oplossingen",
+  "/page": "/",
+  "/prijzen/page": "/prijzen",
+  "/privacyverklaring/page": "/privacyverklaring",
+  "/service-level-agreement/page": "/service-level-agreement",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/verwerkersovereenkomst/page": "/verwerkersovereenkomst"
+}

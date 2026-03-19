@@ -1,0 +1,20 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/acceptable-use-policy/page": "app/acceptable-use-policy/page.js",
+  "/ai-data-ethiek/page": "app/ai-data-ethiek/page.js",
+  "/algemene-voorwaarden/page": "app/algemene-voorwaarden/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/hoe-wij-werken/page": "app/hoe-wij-werken/page.js",
+  "/icon.png/route": "app/icon.png/route.js",
+  "/oplossingen/[slug]/page": "app/oplossingen/[slug]/page.js",
+  "/oplossingen/page": "app/oplossingen/page.js",
+  "/page": "app/page.js",
+  "/prijzen/page": "app/prijzen/page.js",
+  "/privacyverklaring/page": "app/privacyverklaring/page.js",
+  "/service-level-agreement/page": "app/service-level-agreement/page.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/verwerkersovereenkomst/page": "app/verwerkersovereenkomst/page.js"
+}

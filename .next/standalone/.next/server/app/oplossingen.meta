@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/oplossingen/layout,_N_T_/oplossingen/page,_N_T_/oplossingen"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/oplossingen/__PAGE__",
+    "/oplossingen",
+    "/_index",
+    "/_head"
+  ]
+}
