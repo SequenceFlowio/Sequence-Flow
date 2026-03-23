@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
 
-const CHAT_WEBHOOK = 'https://n8n.sequenceflow.io/webhook/chat-message';
-const ESCALATE_WEBHOOK = 'https://n8n.sequenceflow.io/webhook/chat-escalate';
+const CHAT_WEBHOOK = '/api/chat';
+const ESCALATE_WEBHOOK = '/api/escalate';
 
 const QUICK_REPLIES = [
   {
