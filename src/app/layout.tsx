@@ -1,5 +1,6 @@
 import HeaderWrapper from '@/components/shared/HeaderWrapper';
 import SmoothScrollProvider from '@/components/shared/SmoothScroll';
+import SupportWidget from '@/components/shared/SupportWidget';
 import Footer from '@/components/shared/footer/Footer';
 import { AppContextProvider } from '@/context/AppContext';
 import { interTight } from '@/utils/font';
@@ -41,6 +42,7 @@ export default function RootLayout({
             {children}
             <Footer />
           </SmoothScrollProvider>
+          <SupportWidget />
         </AppContextProvider>
       </body>
     </html>
