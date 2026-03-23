@@ -3,7 +3,7 @@ import nodemailer from 'nodemailer';
 
 export async function POST(req: NextRequest) {
   try {
-    const { email, chatLog } = await req.json();
+    const { name, email, chatLog } = await req.json();
 
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
@@ -18,11 +18,12 @@ export async function POST(req: NextRequest) {
     await transporter.sendMail({
       from: `"SequenceFlow Widget" <${process.env.SMTP_USER}>`,
       to: 'hallo@sequenceflow.io',
-      subject: `Chat escalatie van ${email}`,
-      text: `Een bezoeker wil persoonlijk contact.\n\nE-mail bezoeker: ${email}\n\n--- Chatgesprek ---\n\n${chatLog}`,
+      subject: `Supportaanvraag van ${name}`,
+      text: `Een bezoeker vraagt om persoonlijk contact.\n\nNaam: ${name}\nE-mail: ${email}\n\n--- Chatgesprek ---\n\n${chatLog}`,
       html: `
-        <p><strong>Een bezoeker wil persoonlijk contact.</strong></p>
-        <p><strong>E-mail bezoeker:</strong> <a href="mailto:${email}">${email}</a></p>
+        <p><strong>Een bezoeker vraagt om persoonlijk contact.</strong></p>
+        <p><strong>Naam:</strong> ${name}</p>
+        <p><strong>E-mail:</strong> <a href="mailto:${email}">${email}</a></p>
         <hr />
         <h3>Chatgesprek</h3>
         <pre style="font-family: sans-serif; line-height: 1.6; white-space: pre-wrap;">${chatLog}</pre>

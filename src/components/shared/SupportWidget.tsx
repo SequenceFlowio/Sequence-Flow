@@ -37,6 +37,7 @@ export default function SupportWidget() {
     { role: 'bot', text: 'Hoi! Ik ben de SequenceFlow assistent. Hoe kan ik u helpen?' },
   ]);
   const [inputValue, setInputValue] = useState('');
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const [quickRepliesVisible, setQuickRepliesVisible] = useState(true);
@@ -77,14 +78,14 @@ export default function SupportWidget() {
   };
 
   const handleEscalate = async () => {
-    if (!email.trim() || loading) return;
+    if (!name.trim() || !email.trim() || loading) return;
     setLoading(true);
     const chatLog = messages.map((m) => `${m.role === 'user' ? 'Bezoeker' : 'Bot'}: ${m.text}`).join('\n');
     try {
       await fetch(ESCALATE_WEBHOOK, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, chatLog }),
+        body: JSON.stringify({ name, email, chatLog }),
       });
     } finally {
       setLoading(false);
@@ -93,10 +94,22 @@ export default function SupportWidget() {
   };
 
   return (
+    <>
+    <style>{`
+      @keyframes widgetOpen {
+        from { opacity: 0; transform: scale(0.85) translateY(8px); }
+        to   { opacity: 1; transform: scale(1) translateY(0); }
+      }
+    `}</style>
     <div className="fixed bottom-6 right-6 z-[60] flex flex-col items-end gap-3">
       {/* Chat panel */}
       {isOpen && (
-        <div className="flex h-[540px] w-[340px] flex-col overflow-hidden rounded-3xl border border-stroke-3 bg-white shadow-2xl dark:border-stroke-7 dark:bg-background-6 sm:w-[360px]">
+        <div
+          className="flex h-[540px] w-[340px] flex-col overflow-hidden rounded-3xl border border-stroke-3 bg-white shadow-2xl dark:border-stroke-7 dark:bg-background-6 sm:w-[360px]"
+          style={{
+            animation: 'widgetOpen 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
+            transformOrigin: 'bottom right',
+          }}>
           {/* Header */}
           <div className="flex items-center justify-between bg-secondary px-5 py-4 dark:bg-background-8">
             <div className="flex items-center gap-3">
@@ -110,21 +123,38 @@ export default function SupportWidget() {
                 <p className="text-xs text-accent/60">Assistent</p>
               </div>
             </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-accent/60 transition-opacity hover:opacity-100"
-              aria-label="Sluiten">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => {
+                  setMessages([{ role: 'bot', text: 'Hoi! Ik ben de SequenceFlow assistent. Hoe kan ik u helpen?' }]);
+                  setQuickRepliesVisible(true);
+                  setView('chat');
+                  setInputValue('');
+                  setName('');
+                  setEmail('');
+                }}
+                className="text-accent/60 transition-opacity hover:opacity-100"
+                aria-label="Nieuw gesprek">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </button>
+              <button
+                onClick={() => setIsOpen(false)}
+                className="text-accent/60 transition-opacity hover:opacity-100"
+                aria-label="Sluiten">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
           </div>
 
           {/* Body */}
           {view === 'chat' && (
             <>
               {/* Messages */}
-              <div className="flex-1 overflow-y-auto px-4 py-4 space-y-3">
+              <div className="flex-1 overflow-y-auto overscroll-contain px-4 py-4 space-y-3">
                 {messages.map((msg, i) => (
                   <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
                     <div
@@ -204,27 +234,39 @@ export default function SupportWidget() {
                 <div>
                   <p className="text-sm font-semibold text-secondary dark:text-accent">Verbinden met een medewerker</p>
                   <p className="mt-1 text-xs text-secondary/60 dark:text-accent/60">
-                    Vul uw e-mailadres in. Wij sturen u het chatgesprek toe en nemen contact op.
+                    Laat uw gegevens achter en wij nemen spoedig contact met u op.
                   </p>
                 </div>
-                <div className="space-y-2">
-                  <label className="text-xs font-medium text-secondary dark:text-accent">E-mailadres</label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleEscalate()}
-                    placeholder="uw@email.nl"
-                    className="h-10 w-full rounded-full border border-stroke-3 bg-background-1 px-4 text-sm text-secondary placeholder:text-secondary/50 focus:border-secondary focus:outline-none dark:border-stroke-7 dark:bg-background-5 dark:text-accent dark:placeholder:text-accent/50"
-                  />
+                <div className="space-y-3">
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-medium text-secondary dark:text-accent">Naam</label>
+                    <input
+                      type="text"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Uw naam"
+                      className="h-10 w-full rounded-full border border-stroke-3 bg-background-1 px-4 text-sm text-secondary placeholder:text-secondary/50 focus:border-secondary focus:outline-none dark:border-stroke-7 dark:bg-background-5 dark:text-accent dark:placeholder:text-accent/50"
+                    />
+                  </div>
+                  <div className="space-y-1.5">
+                    <label className="text-xs font-medium text-secondary dark:text-accent">E-mailadres</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      onKeyDown={(e) => e.key === 'Enter' && handleEscalate()}
+                      placeholder="uw@email.nl"
+                      className="h-10 w-full rounded-full border border-stroke-3 bg-background-1 px-4 text-sm text-secondary placeholder:text-secondary/50 focus:border-secondary focus:outline-none dark:border-stroke-7 dark:bg-background-5 dark:text-accent dark:placeholder:text-accent/50"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="space-y-2">
                 <button
                   onClick={handleEscalate}
-                  disabled={!email.trim() || loading}
+                  disabled={!name.trim() || !email.trim() || loading}
                   className="w-full rounded-full bg-secondary py-2.5 text-sm font-medium text-accent transition-opacity hover:opacity-80 disabled:opacity-40 dark:bg-[#C7F56F] dark:text-secondary">
-                  {loading ? 'Versturen...' : 'Verstuur chatgesprek'}
+                  {loading ? 'Versturen...' : 'Verstuur aanvraag'}
                 </button>
                 <button
                   onClick={() => setView('chat')}
@@ -245,11 +287,11 @@ export default function SupportWidget() {
               <div>
                 <p className="font-semibold text-secondary dark:text-accent">Bedankt!</p>
                 <p className="mt-1 text-sm text-secondary/60 dark:text-accent/60">
-                  Wij hebben uw chatgesprek ontvangen en nemen zo snel mogelijk contact op via uw e-mail.
+                  Wij nemen spoedig contact met u op.
                 </p>
               </div>
               <button
-                onClick={() => { setView('chat'); setEmail(''); }}
+                onClick={() => { setView('chat'); setName(''); setEmail(''); }}
                 className="text-xs text-secondary/50 hover:text-secondary dark:text-accent/50 dark:hover:text-accent">
                 Terug naar chat
               </button>
@@ -274,5 +316,6 @@ export default function SupportWidget() {
         )}
       </button>
     </div>
+    </>
   );
 }
