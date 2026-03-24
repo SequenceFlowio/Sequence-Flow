@@ -105,6 +105,7 @@ export default function SupportWidget() {
       {/* Chat panel */}
       {isOpen && (
         <div
+          data-lenis-prevent
           className="flex h-[540px] w-[340px] flex-col overflow-hidden rounded-3xl border border-stroke-3 bg-white shadow-2xl dark:border-stroke-7 dark:bg-background-6 sm:w-[360px]"
           style={{
             animation: 'widgetOpen 0.25s cubic-bezier(0.34, 1.56, 0.64, 1) forwards',
@@ -136,7 +137,8 @@ export default function SupportWidget() {
                 className="text-accent/60 transition-opacity hover:opacity-100"
                 aria-label="Nieuw gesprek">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7" />
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z" />
                 </svg>
               </button>
               <button
@@ -303,7 +305,7 @@ export default function SupportWidget() {
       {/* Toggle button */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex size-14 items-center justify-center rounded-full bg-[#C7F56F] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        className="flex size-14 items-center justify-center rounded-full bg-secondary shadow-lg transition-all hover:scale-105 hover:shadow-xl dark:bg-background-8"
         aria-label="Open support chat">
         {isOpen ? (
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
