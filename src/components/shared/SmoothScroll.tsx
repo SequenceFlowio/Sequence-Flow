@@ -41,12 +41,9 @@ const SmoothScrollProvider = ({ children }: Readonly<{ children: ReactNode }>) =
   }, [lenis, pathname]);
 
   return (
-    <ReactLenis root options={{ duration: 1.1 }}>
-      <Suspense>
-        <ScrollReset />
-      </Suspense>
+    <>
       {children}
-    </ReactLenis>
+    </>
   );
 };
 
