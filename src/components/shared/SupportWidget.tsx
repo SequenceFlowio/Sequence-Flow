@@ -303,7 +303,7 @@ export default function SupportWidget() {
       {/* Toggle button */}
       <button
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex size-14 items-center justify-center rounded-full bg-secondary shadow-lg transition-all hover:scale-105 hover:shadow-xl dark:bg-background-8"
+        className="flex size-14 items-center justify-center rounded-full bg-[#C7F56F] shadow-lg transition-all hover:scale-105 hover:shadow-xl"
         aria-label="Open support chat">
         {isOpen ? (
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.5">
