@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 import RevealAnimation from '../animation/RevealAnimation';
+import TableOfContent from '../service-details/TableOfContent';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion';
 import ShareLink from './ShareLink';
 
@@ -18,6 +19,7 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
   return (
     <section className="pt-32 pb-14 sm:pt-36 md:pt-42 md:pb-16 lg:pb-[88px] xl:pt-[180px] xl:pb-[200px]">
       <div className="main-container">
+        {/* Header */}
         <div className="mx-auto max-w-[1209px] space-y-3">
           <RevealAnimation delay={0.1}>
             <h2 className="max-w-[884px]">{blog.data.title}</h2>
@@ -49,6 +51,8 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
             </div>
           </div>
         </div>
+
+        {/* Thumbnail */}
         <RevealAnimation delay={0.4}>
           <figure className="my-10 max-w-full overflow-hidden rounded-lg md:my-[70px] md:rounded-4xl">
             <Image
@@ -60,40 +64,51 @@ const BlogContent = ({ blog }: { blog: matter.GrayMatterFile<string> }) => {
             />
           </figure>
         </RevealAnimation>
-        {/* Blog details-body */}
-        <RevealAnimation delay={0.5}>
-          <article className="details-body">
-            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[[rehypeSlug]]}>{blog.content}</ReactMarkdown>
-          </article>
-        </RevealAnimation>
 
-        {/* FAQ accordion */}
-        {faqItems && faqItems.length > 0 && (
-          <RevealAnimation delay={0.3}>
-            <div className="mx-auto mt-20 max-w-[950px]">
-              <h2 className="text-heading-4 mb-8">Veelgestelde vragen</h2>
-              <Accordion defaultValue="0">
-                {faqItems.map((item, i) => (
-                  <AccordionItem key={i} value={String(i)}>
-                    <AccordionTrigger
-                      className="flex w-full cursor-pointer items-center justify-between pt-6 pb-6"
-                      titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
-                      value={String(i)}
-                      iconType="arrow">
-                      {item.question}
-                    </AccordionTrigger>
-                    <AccordionContent value={String(i)}>
-                      {item.answer}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </div>
-          </RevealAnimation>
-        )}
+        {/* Two-column body */}
+        <div className="flex items-start lg:gap-[72px]">
+          <div className="w-full max-w-full lg:max-w-[767px]">
+            {/* Blog body */}
+            <RevealAnimation delay={0.5}>
+              <article className="details-body">
+                <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[[rehypeSlug]]}>
+                  {blog.content}
+                </ReactMarkdown>
+              </article>
+            </RevealAnimation>
 
-        {/* details-footer */}
-        <ShareLink />
+            {/* FAQ accordion */}
+            {faqItems && faqItems.length > 0 && (
+              <RevealAnimation delay={0.3}>
+                <div className="mt-20">
+                  <h2 className="text-heading-4 mb-8">Veelgestelde vragen</h2>
+                  <Accordion defaultValue="0">
+                    {faqItems.map((item, i) => (
+                      <AccordionItem key={i} value={String(i)}>
+                        <AccordionTrigger
+                          className="flex w-full cursor-pointer items-center justify-between pt-6 pb-6"
+                          titleClassName="flex-1 text-left xl:text-heading-6 text-tagline-1 font-normal text-secondary dark:text-accent"
+                          value={String(i)}
+                          iconType="arrow">
+                          {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent value={String(i)}>
+                          {item.answer}
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              </RevealAnimation>
+            )}
+
+            {/* Share */}
+            <ShareLink />
+          </div>
+
+          {/* Table of Contents */}
+          <TableOfContent markdownContent={blog.content} readTime={blog.data.readTime as string | undefined} />
+        </div>
       </div>
     </section>
   );

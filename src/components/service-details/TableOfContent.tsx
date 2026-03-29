@@ -9,9 +9,10 @@ import RevealAnimation from '../animation/RevealAnimation';
 
 interface TableOfContentProps {
   markdownContent: string;
+  readTime?: string;
 }
 
-const TableOfContent = ({ markdownContent }: TableOfContentProps) => {
+const TableOfContent = ({ markdownContent, readTime }: TableOfContentProps) => {
   const lenis = useLenis();
 
   // Generate TOC from markdown content
@@ -41,6 +42,14 @@ const TableOfContent = ({ markdownContent }: TableOfContentProps) => {
     <RevealAnimation delay={0.3}>
       <div className="table-of-contents hidden w-full lg:sticky lg:top-20 lg:block lg:max-w-[449px]">
         <div className="bg-background-1 dark:bg-background-6 w-full space-y-4 rounded-[20px] p-11">
+          {readTime && (
+            <p className="text-secondary/50 dark:text-accent/50 flex items-center gap-1.5 text-sm font-normal">
+              <svg xmlns="http://www.w3.org/2000/svg" width={16} height={16} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
+              </svg>
+              {readTime}
+            </p>
+          )}
           <h3 className="text-heading-5">Inhoudsopgave</h3>
           <ul className="table-of-list w-full">
             {tocItems.map((item, index) => {
