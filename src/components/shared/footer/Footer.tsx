@@ -5,7 +5,7 @@ import xTwitter from '@public/images/icons/x-twitter.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import facebook from '@public/images/icons/facebook.svg';
 import reddit from '@public/images/icons/reddit.svg';
-import logoZwart from '@/components/content/sequenceflow-logo-zwart.png';
+import logoZwart from '@/components/content/sequenceflow-logo-new.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterDivider from './FooterDivider';
