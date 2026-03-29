@@ -5,7 +5,6 @@ import cardTwoImgDark from '@public/images/ns-img-dark-64.png';
 import cardThreeImg from '@public/images/ns-img-92.png';
 import cardThreeImgDark from '@public/images/ns-img-dark-65.png';
 import Image from 'next/image';
-import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 
 export interface WebApp {
@@ -30,7 +29,6 @@ export interface OplossingsLandingProps {
   badge: string;
   title: string;
   description: string;
-  ctaText?: string;
   apps: [WebApp, WebApp, WebApp];
   appsHeading: string;
   appsDescription: string;
@@ -47,7 +45,6 @@ const OplossingsLanding = ({
   badge,
   title,
   description,
-  ctaText = 'Start uw Flow Scan',
   apps,
   appsHeading,
   appsDescription,
@@ -65,12 +62,7 @@ const OplossingsLanding = ({
             <h1 className="mx-auto max-w-[820px] mb-4">{title}</h1>
           </RevealAnimation>
           <RevealAnimation delay={0.3}>
-            <p className="mx-auto max-w-[640px] text-secondary/60 dark:text-accent/60 mb-8">{description}</p>
-          </RevealAnimation>
-          <RevealAnimation delay={0.4}>
-            <Link href="/contact" className="btn btn-xl btn-primary">
-              {ctaText}
-            </Link>
+            <p className="mx-auto max-w-[640px] text-secondary/60 dark:text-accent/60">{description}</p>
           </RevealAnimation>
         </div>
       </section>
@@ -172,24 +164,6 @@ const OplossingsLanding = ({
         </section>
       ))}
 
-      {/* Bottom CTA */}
-      <section className="py-20 md:py-[100px]">
-        <div className="main-container text-center">
-          <RevealAnimation delay={0.2}>
-            <h2 className="mx-auto max-w-[640px] mb-4">Klaar om te starten?</h2>
-          </RevealAnimation>
-          <RevealAnimation delay={0.3}>
-            <p className="text-secondary/60 dark:text-accent/60 mx-auto max-w-[520px] mb-8">
-              Plan een gratis Flow Scan en ontdek hoeveel tijd en geld u kunt besparen.
-            </p>
-          </RevealAnimation>
-          <RevealAnimation delay={0.4}>
-            <Link href="/contact" className="btn btn-xl btn-primary">
-              {ctaText}
-            </Link>
-          </RevealAnimation>
-        </div>
-      </section>
     </main>
   );
 };
