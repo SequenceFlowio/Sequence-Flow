@@ -5,8 +5,7 @@ import xTwitter from '@public/images/icons/x-twitter.svg';
 import instagram from '@public/images/icons/instagram.svg';
 import facebook from '@public/images/icons/facebook.svg';
 import reddit from '@public/images/icons/reddit.svg';
-import gradientImg from '@public/images/ns-img-532.png';
-import logoWit from '@/components/content/sequenceflow-logo-wit.png';
+import logoZwart from '@/components/content/sequenceflow-logo-zwart.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import FooterDivider from './FooterDivider';
@@ -21,18 +20,15 @@ const socialLinks = [
 
 const Footer = ({ className }: { className?: string }) => {
   return (
-    <footer className={cn('bg-secondary dark:bg-background-8 relative z-0 overflow-hidden', className)}>
-      <figure className="pointer-events-none absolute -top-[1320px] left-1/2 -z-1 size-[1635px] -translate-x-1/2 select-none">
-        <Image src={gradientImg} alt="footer-four-gradient" className="size-full object-cover" />
-      </figure>
+    <footer className={cn('bg-white relative z-0 overflow-hidden', className)}>
       <div className="main-container px-5">
         {/* CTA Section */}
         <div className="pt-16 pb-12 xl:pt-[90px]">
           <div className="flex flex-col items-center justify-between gap-8 xl:flex-row">
             <div className="max-w-[649px] space-y-3 text-center xl:text-left">
               <span className="badge !badge-green">Start vandaag</span>
-              <h2 className="md:text-heading-2 text-heading-5 text-accent">Klaar om te automatiseren?</h2>
-              <p className="text-accent/60">
+              <h2 className="md:text-heading-2 text-heading-5 text-gray-900">Klaar om te automatiseren?</h2>
+              <p className="text-gray-500">
                 Ontdek in 1 minuut hoeveel tijd uw bedrijf verliest aan handmatig werk.
               </p>
             </div>
@@ -45,14 +41,14 @@ const Footer = ({ className }: { className?: string }) => {
             </div>
           </div>
         </div>
-        <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
+        <FooterDivider className="bg-gray-200" />
         {/* Footer content */}
         <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-12 pt-12 pb-12">
           <div className="max-w-[306px]">
             <figure>
-              <Image src={logoWit} alt="Logo" />
+              <Image src={logoZwart} alt="Logo" />
             </figure>
-            <p className="text-accent/60 text-tagline-1 mt-4 mb-7 font-normal">
+            <p className="text-gray-500 text-tagline-1 mt-4 mb-7 font-normal">
               Wij bouwen, implementeren en beheren intelligente workflows die uw bedrijf laten groeien zonder extra
               personeel.
             </p>
@@ -60,24 +56,31 @@ const Footer = ({ className }: { className?: string }) => {
               {socialLinks.map((social) => (
                 <Link key={social.name} target="_blank" href={social.href}>
                   <span className="sr-only">{social.name}</span>
-                  <Image className={cn('opacity-60 transition-opacity hover:opacity-100', social.sizeClass)} src={social.icon} alt={social.name} />
+                  <Image
+                    className={cn('invert opacity-40 transition-opacity hover:opacity-70', social.sizeClass)}
+                    src={social.icon}
+                    alt={social.name}
+                  />
                 </Link>
               ))}
             </div>
             <Link
               href="mailto:hallo@sequenceflow.io"
-              className="text-accent/60 text-tagline-2 mt-4 inline-block font-normal transition-opacity hover:opacity-100">
+              className="text-gray-500 text-tagline-2 mt-4 inline-block font-normal hover:text-gray-900 transition-colors">
               hallo@sequenceflow.io
             </Link>
-            <p className="text-accent/40 text-tagline-3 mt-2 font-normal">KvK: 78237750</p>
+            <p className="text-gray-400 text-tagline-3 mt-2 font-normal">KvK: 78237750</p>
           </div>
           <div className="flex flex-wrap gap-x-16 gap-y-8">
             {footerLinks.map((group) => (
               <div key={group.title}>
-                <h6 className="text-accent mb-4 text-sm font-medium">{group.title}</h6>
+                <h6 className="text-gray-900 mb-4 text-sm font-medium">{group.title}</h6>
                 <div className="flex flex-col gap-3">
                   {group.links.map(({ label, href }) => (
-                    <Link key={label} href={href} className="footer-link text-tagline-1">
+                    <Link
+                      key={label}
+                      href={href}
+                      className="text-gray-500 text-tagline-1 hover:text-gray-900 transition-colors">
                       {label}
                     </Link>
                   ))}
@@ -86,12 +89,22 @@ const Footer = ({ className }: { className?: string }) => {
             ))}
           </div>
         </div>
-        <div className="relative pt-[26px] pb-[42px] text-center">
-          <FooterDivider className="bg-accent/10 dark:bg-stroke-6" />
-          <p className="text-tagline-1 text-primary-50 font-normal">
-            Copyright &copy;SequenceFlow. Flow-as-a-Service voor moderne bedrijven
+        <FooterDivider className="bg-gray-200" />
+        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 py-6">
+          <p className="text-tagline-1 text-gray-500 font-normal">
+            &copy; 2026 SequenceFlow. Alle rechten voorbehouden.
           </p>
+          <p className="text-tagline-3 text-gray-400 font-normal">KvK: 78237750</p>
         </div>
+      </div>
+      {/* Big brand name at bottom */}
+      <div className="relative overflow-hidden leading-none select-none">
+        <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white to-transparent z-10" />
+        <p
+          className="text-center font-bold text-gray-100 whitespace-nowrap"
+          style={{ fontSize: 'clamp(60px, 12vw, 160px)', lineHeight: 1, marginBottom: '-0.15em' }}>
+          SequenceFlow
+        </p>
       </div>
     </footer>
   );
