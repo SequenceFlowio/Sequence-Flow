@@ -151,9 +151,11 @@ const FlowScanForm = () => {
           </div>
 
           {/* Social proof */}
-          <p className="text-tagline-2 text-secondary/50 dark:text-accent/50 text-center font-normal">
-            Al 40+ MKB-bedrijven gingen u voor
-          </p>
+          <div className="flex justify-center">
+            <span className="inline-flex items-center rounded-full bg-[#C7F56F] px-5 py-2 text-sm font-semibold text-secondary">
+              Al 40+ MKB-bedrijven gingen u voor
+            </span>
+          </div>
 
           {/* Form card */}
           <div className="mx-auto w-full max-w-[600px]">
