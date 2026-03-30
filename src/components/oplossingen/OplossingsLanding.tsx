@@ -5,12 +5,14 @@ import cardTwoImgDark from '@public/images/ns-img-dark-64.png';
 import cardThreeImg from '@public/images/ns-img-92.png';
 import cardThreeImgDark from '@public/images/ns-img-dark-65.png';
 import Image, { StaticImageData } from 'next/image';
+import Link from 'next/link';
 import RevealAnimation from '../animation/RevealAnimation';
 
 export interface WebApp {
   name: string;
   description: string;
   image?: StaticImageData | string;
+  href: string;
 }
 
 export interface FeatureItem {
@@ -84,14 +86,17 @@ const OplossingsLanding = ({
             <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
               {apps.map((app, i) => (
                 <RevealAnimation key={app.name} delay={0.4 + i * 0.1}>
-                  <div className="space-y-3">
-                    <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5">
-                      <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
+                  <Link
+                    href={app.href}
+                    className="group block w-full max-w-[409px] space-y-3 outline-none">
+                    <div className="dark:bg-background-5 rounded-[20px] bg-white p-2.5 transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
+                      <figure className="bg-background-3 dark:bg-background-7 relative h-[200px] overflow-hidden rounded-2xl">
                         {app.image ? (
                           <Image
                             src={app.image}
                             alt={app.name}
-                            className="h-full w-full object-cover"
+                            fill
+                            className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
                             loading="lazy"
                           />
                         ) : (
@@ -99,13 +104,15 @@ const OplossingsLanding = ({
                             <Image
                               src={cardImgs[i].light}
                               alt={app.name}
-                              className="h-full w-full object-cover dark:hidden"
+                              fill
+                              className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] dark:hidden"
                               loading="lazy"
                             />
                             <Image
                               src={cardImgs[i].dark}
                               alt={app.name}
-                              className="hidden h-full w-full object-cover dark:block"
+                              fill
+                              className="hidden object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] dark:block"
                               loading="lazy"
                             />
                           </>
@@ -113,10 +120,15 @@ const OplossingsLanding = ({
                       </figure>
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-heading-5">{app.name}</h3>
+                      <h3 className="text-heading-5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-primary">
+                        {app.name}
+                        <svg className="size-4 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100" fill="none" viewBox="0 0 16 16">
+                          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </h3>
                       <p>{app.description}</p>
                     </div>
-                  </div>
+                  </Link>
                 </RevealAnimation>
               ))}
             </div>

@@ -1,9 +1,9 @@
 import OplossingsLanding from '@/components/oplossingen/OplossingsLanding';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
-import emailReplyImg from '@/components/content/email_reply.png';
-import chatbotImg from '@/components/content/chatbot.png';
-import bookingFlowImg from '@/components/content/booking_flow.png';
+import emailReplyImg from '@/components/content/email_reply.webp';
+import chatbotImg from '@/components/content/chatbot.webp';
+import bookingFlowImg from '@/components/content/booking_flow.webp';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -23,16 +23,19 @@ const SupportFlowPage = () => {
           name: 'Email Reply',
           description: 'AI beantwoordt inkomende e-mails automatisch met contextuele, gepersonaliseerde antwoorden.',
           image: emailReplyImg,
+          href: '/email-reply',
         },
         {
           name: 'Chatbot',
           description: 'Een slimme chatbot die veelgestelde vragen direct beantwoordt en escaleert wanneer nodig.',
           image: chatbotImg,
+          href: '/chatbot',
         },
         {
           name: 'Booking Flow',
           description: 'Automatische afsprakenbeheer en planning direct vanuit het klantgesprek.',
           image: bookingFlowImg,
+          href: '/booking-flow',
         },
       ]}
       appsHeading="Drie krachtige webapps voor complete ondersteuning"

@@ -1,9 +1,9 @@
 import OplossingsLanding from '@/components/oplossingen/OplossingsLanding';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
-import outreachImg from '@/components/content/outreach.jpg';
-import contentGenImg from '@/components/content/content_gen.png';
-import reviewGenImg from '@/components/content/review_gen.png';
+import outreachImg from '@/components/content/outreach.webp';
+import contentGenImg from '@/components/content/content_gen.webp';
+import reviewGenImg from '@/components/content/review_gen.webp';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -23,16 +23,19 @@ const LeadFlowPage = () => {
           name: 'Outreach',
           description: 'AI benadert prospects via LinkedIn en e-mail met gepersonaliseerde berichten op schaal.',
           image: outreachImg,
+          href: '/outreach',
         },
         {
           name: 'Content Gen',
           description: 'Genereer relevante outreach content automatisch, afgestemd op elke prospect.',
           image: contentGenImg,
+          href: '/content-gen',
         },
         {
           name: 'Reviews Gen',
           description: 'Genereer automatisch review-verzoeken en verzamel klantbeoordelingen op de juiste momenten.',
           image: reviewGenImg,
+          href: '/reviews-gen',
         },
       ]}
       appsHeading="Drie krachtige webapps in één flow"
