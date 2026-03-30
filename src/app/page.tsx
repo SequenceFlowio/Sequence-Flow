@@ -4,7 +4,6 @@ import Faq from '@/components/home/Faq';
 import Features from '@/components/home/Features';
 import Hero from '@/components/home/Hero';
 import HowItsWork from '@/components/home/HowItsWork';
-import Services from '@/components/home/Services';
 import Testimonial from '@/components/home/Testimonial';
 import WhatWeDo from '@/components/home/WhatWeDo';
 import { defaultMetadata } from '@/utils/generateMetaData';
@@ -23,7 +22,6 @@ const page = () => {
       <WhatWeDo />
       <Features />
       <HowItsWork />
-      <Services />
       <Testimonial />
       <Faq />
       <CTA />

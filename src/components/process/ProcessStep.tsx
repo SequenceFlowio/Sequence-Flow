@@ -64,12 +64,11 @@ const ProcessStep = () => {
           </RevealAnimation>
           <div className="space-y-3">
             <RevealAnimation delay={0.2}>
-              <h2>Hoe wij samenwerken</h2>
+              <h2>Zo bouwen wij uw eigen flow</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
               <p className="mx-auto max-w-[610px]">
-                Ons proces is transparant, resultaatgericht en gebouwd op heldere communicatie. Van intake tot
-                oplevering, u weet precies waar u aan toe bent.
+                Van eerste gesprek tot live automatisering — een helder, stap-voor-stap traject zonder verrassingen.
               </p>
             </RevealAnimation>
           </div>
@@ -114,10 +113,9 @@ const ProcessStep = () => {
                   <div className="card-item dark:bg-background-6 max-sm:bg-background-4 absolute top-1/2 left-1/2 w-full max-w-[370px] -translate-x-1/2 -translate-y-1/2 space-y-3 rounded-[20px] p-6 lg:top-0 lg:left-0 lg:translate-x-0 lg:translate-y-0 lg:rounded-none lg:bg-none lg:p-0 lg:dark:bg-transparent">
                     <p className="text-tagline-2 text-black">STAP 1</p>
                     <div className="space-y-2">
-                      <h3 className="text-heading-6 lg:text-heading-5">Intake &amp; procesanalyse</h3>
+                      <h3 className="text-heading-6 lg:text-heading-5">Flow Scan</h3>
                       <p>
-                        We starten met een grondige analyse van uw huidige processen en identificeren waar automatisering
-                        de meeste impact heeft.
+                        Gratis kennismaking: wij analyseren uw processen en identificeren de grootste automatiseringskansen.
                       </p>
                     </div>
                   </div>
@@ -161,11 +159,10 @@ const ProcessStep = () => {
                     <p className="text-tagline-2 text-black">STAP 2</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[293px]">
-                        Flow ontwerp &amp; architectuur
+                        Flow Ontwerp
                       </h3>
                       <p>
-                        We ontwerpen de optimale flow-architectuur en bepalen welke integraties en tools nodig zijn voor
-                        uw specifieke situatie.
+                        Samen ontwerpen wij de ideale flow voor uw situatie — op maat, geen standaardoplossing.
                       </p>
                     </div>
                   </div>
@@ -209,11 +206,10 @@ const ProcessStep = () => {
                     <p className="text-tagline-2 text-black">STAP 3</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[236px]">
-                        Bouw &amp; integratie
+                        Bouw &amp; Integratie
                       </h3>
                       <p>
-                        We bouwen uw flows en koppelen deze aan uw bestaande systemen zoals CRM, e-mail en andere tools
-                        die u dagelijks gebruikt.
+                        Wij bouwen en koppelen alles aan uw bestaande tools zoals uw CRM, e-mail en overige systemen.
                       </p>
                     </div>
                   </div>
@@ -257,11 +253,10 @@ const ProcessStep = () => {
                     <p className="text-tagline-2 text-black">STAP 4</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[236px]">
-                        Testen &amp; optimaliseren
+                        Testen &amp; Verfijnen
                       </h3>
                       <p>
-                        We testen de flows grondig en optimaliseren waar nodig totdat alles vlekkeloos draait en aan uw
-                        verwachtingen voldoet.
+                        Live testen en data-gedreven optimalisatie voordat de flow volledig live gaat.
                       </p>
                     </div>
                   </div>
@@ -276,11 +271,10 @@ const ProcessStep = () => {
                     <p className="text-tagline-2 text-black">STAP 5</p>
                     <div className="space-y-2">
                       <h3 className="text-heading-6 lg:text-heading-5 max-w-[203px]">
-                        Oplevering &amp; ondersteuning
+                        Live &amp; Doorgroeien
                       </h3>
                       <p>
-                        Na oplevering blijven we beschikbaar voor ondersteuning, monitoring en verdere uitbreiding van
-                        uw geautomatiseerde flows.
+                        Uw flow gaat live. Wij monitoren, verbeteren en schalen mee naarmate uw bedrijf groeit.
                       </p>
                     </div>
                   </div>
