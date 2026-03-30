@@ -21,7 +21,7 @@ const steps = [
   {
     num: 2,
     title: 'Flow Ontwerp',
-    body: 'Samen ontwerpen wij de ideale flow voor uw situatie — op maat, geen standaardoplossing.',
+    body: 'Samen ontwerpen wij de ideale flow voor uw situatie. Op maat gemaakt, geen standaardoplossing.',
     cx: 550,
     cy: 300,
     side: 'right' as const,
@@ -89,16 +89,13 @@ const ProcessStep = () => {
       <div className="main-container" ref={scopeRef}>
         {/* Heading */}
         <div className="mb-[70px] space-y-5 text-center">
-          <RevealAnimation delay={0.1}>
-            <span className="badge badge-green">Ons Proces</span>
-          </RevealAnimation>
           <div className="space-y-3">
             <RevealAnimation delay={0.2}>
               <h2>Zo bouwen wij uw eigen flow</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.3}>
               <p className="mx-auto max-w-[610px]">
-                Van eerste gesprek tot live automatisering — een helder, stap-voor-stap traject zonder verrassingen.
+                Van eerste gesprek tot live automatisering. Een helder, stap-voor-stap traject zonder verrassingen.
               </p>
             </RevealAnimation>
           </div>
