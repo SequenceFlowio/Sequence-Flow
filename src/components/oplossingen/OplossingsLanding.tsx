@@ -13,17 +13,12 @@ export interface WebApp {
   description: string;
   image?: StaticImageData | string;
   href: string;
-}
-
-export interface FeatureItem {
-  title: string;
-  description: string;
+  comingSoon?: boolean;
 }
 
 export interface ContentSection {
   heading: string;
-  intro: string;
-  items: FeatureItem[];
+  paragraphs: string[];
   imageSrc: string;
   imageAlt: string;
 }
@@ -33,8 +28,6 @@ export interface OplossingsLandingProps {
   title: string;
   description: string;
   apps: [WebApp, WebApp, WebApp];
-  appsHeading: string;
-  appsDescription: string;
   sections: ContentSection[];
 }
 
@@ -44,13 +37,84 @@ const cardImgs = [
   { light: cardThreeImg, dark: cardThreeImgDark },
 ];
 
+const AppCard = ({ app, index }: { app: WebApp; index: number }) => {
+  const figure = (
+    <figure className="bg-background-3 dark:bg-background-7 relative h-[200px] overflow-hidden rounded-2xl">
+      {app.image ? (
+        <Image
+          src={app.image}
+          alt={app.name}
+          fill
+          className={`object-cover transition-all duration-300 ease-out ${app.comingSoon ? 'group-hover:grayscale group-hover:opacity-60' : 'group-hover:scale-[1.03]'}`}
+          loading="lazy"
+        />
+      ) : (
+        <>
+          <Image
+            src={cardImgs[index].light}
+            alt={app.name}
+            fill
+            className={`object-cover transition-all duration-300 ease-out dark:hidden ${app.comingSoon ? 'group-hover:grayscale group-hover:opacity-60' : 'group-hover:scale-[1.03]'}`}
+            loading="lazy"
+          />
+          <Image
+            src={cardImgs[index].dark}
+            alt={app.name}
+            fill
+            className={`hidden object-cover transition-all duration-300 ease-out dark:block ${app.comingSoon ? 'group-hover:grayscale group-hover:opacity-60' : 'group-hover:scale-[1.03]'}`}
+            loading="lazy"
+          />
+        </>
+      )}
+      {app.comingSoon && (
+        <div className="absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <span className="rounded-full bg-white/90 px-4 py-1.5 text-sm font-semibold text-secondary shadow-sm backdrop-blur-sm">
+            Coming soon
+          </span>
+        </div>
+      )}
+    </figure>
+  );
+
+  const inner = (
+    <>
+      <div className={`dark:bg-background-5 rounded-[20px] bg-white p-2.5 transition-all duration-300 ease-out ${!app.comingSoon ? 'group-hover:-translate-y-1 group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]' : ''}`}>
+        {figure}
+      </div>
+      <div className="space-y-1">
+        <h3 className={`text-heading-5 flex items-center gap-1.5 transition-colors duration-200 ${app.comingSoon ? 'text-secondary/40 dark:text-accent/40' : 'group-hover:text-[#C7F56F]'}`}>
+          {app.name}
+          {!app.comingSoon && (
+            <svg className="size-4 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100" fill="none" viewBox="0 0 16 16">
+              <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          )}
+        </h3>
+        <p className={app.comingSoon ? 'text-secondary/40 dark:text-accent/40' : ''}>{app.description}</p>
+      </div>
+    </>
+  );
+
+  if (app.comingSoon) {
+    return (
+      <div className="group block w-full max-w-[409px] cursor-default space-y-3">
+        {inner}
+      </div>
+    );
+  }
+
+  return (
+    <Link href={app.href} className="group block w-full max-w-[409px] space-y-3 outline-none">
+      {inner}
+    </Link>
+  );
+};
+
 const OplossingsLanding = ({
   badge,
   title,
   description,
   apps,
-  appsHeading,
-  appsDescription,
   sections,
 }: OplossingsLandingProps) => {
   return (
@@ -70,68 +134,15 @@ const OplossingsLanding = ({
         </div>
       </section>
 
-      {/* Webapps — Features card layout */}
+      {/* Webapps */}
       <section className="pb-20 md:pb-[100px]" aria-label="Webapps">
         <div className="main-container">
-          <div className="space-y-[70px]">
-            <div className="space-y-3 text-center">
-              <RevealAnimation delay={0.2}>
-                <h2 className="mx-auto max-w-[814px]">{appsHeading}</h2>
+          <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
+            {apps.map((app, i) => (
+              <RevealAnimation key={app.name} delay={0.2 + i * 0.1}>
+                <AppCard app={app} index={i} />
               </RevealAnimation>
-              <RevealAnimation delay={0.3}>
-                <p className="mx-auto max-w-[640px]">{appsDescription}</p>
-              </RevealAnimation>
-            </div>
-
-            <div className="flex flex-col items-center justify-center gap-y-8 sm:flex-row sm:gap-x-8">
-              {apps.map((app, i) => (
-                <RevealAnimation key={app.name} delay={0.4 + i * 0.1}>
-                  <Link
-                    href={app.href}
-                    className="group block w-full max-w-[409px] space-y-3 outline-none">
-                    <div className="dark:bg-background-5 rounded-[20px] bg-white p-2.5 transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.08)] dark:group-hover:shadow-[0_8px_30px_rgba(0,0,0,0.3)]">
-                      <figure className="bg-background-3 dark:bg-background-7 relative h-[200px] overflow-hidden rounded-2xl">
-                        {app.image ? (
-                          <Image
-                            src={app.image}
-                            alt={app.name}
-                            fill
-                            className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
-                            loading="lazy"
-                          />
-                        ) : (
-                          <>
-                            <Image
-                              src={cardImgs[i].light}
-                              alt={app.name}
-                              fill
-                              className="object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] dark:hidden"
-                              loading="lazy"
-                            />
-                            <Image
-                              src={cardImgs[i].dark}
-                              alt={app.name}
-                              fill
-                              className="hidden object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03] dark:block"
-                              loading="lazy"
-                            />
-                          </>
-                        )}
-                      </figure>
-                    </div>
-                    <div className="space-y-1">
-                      <h3 className="text-heading-5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-[#C7F56F]">
-                        {app.name}
-                        <svg className="size-4 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100" fill="none" viewBox="0 0 16 16">
-                          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                      </h3>
-                      <p>{app.description}</p>
-                    </div>
-                  </Link>
-                </RevealAnimation>
-              ))}
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -145,30 +156,15 @@ const OplossingsLanding = ({
             <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-20">
               <div className={`flex-1 ${i % 2 === 1 ? 'lg:order-2' : ''}`}>
                 <RevealAnimation delay={0.2}>
-                  <h2 className="mb-4">{section.heading}</h2>
+                  <h2 className="mb-5">{section.heading}</h2>
                 </RevealAnimation>
-                <RevealAnimation delay={0.3}>
-                  <p className="text-secondary/60 dark:text-accent/60 mb-6">{section.intro}</p>
-                </RevealAnimation>
-                <ul className="space-y-3">
-                  {section.items.map((item) => (
-                    <RevealAnimation key={item.title} delay={0.4}>
-                      <li className="flex items-start gap-3">
-                        <span className="mt-1 flex size-5 shrink-0 items-center justify-center rounded-full bg-primary/10">
-                          <svg className="size-3 text-primary" fill="none" viewBox="0 0 12 12">
-                            <path d="M2 6l3 3 5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                          </svg>
-                        </span>
-                        <span>
-                          <strong className="text-secondary dark:text-accent font-medium">{item.title}</strong>
-                          {item.description && (
-                            <span className="text-secondary/60 dark:text-accent/60"> – {item.description}</span>
-                          )}
-                        </span>
-                      </li>
+                <div className="space-y-4">
+                  {section.paragraphs.map((p, idx) => (
+                    <RevealAnimation key={idx} delay={0.3 + idx * 0.1}>
+                      <p className="text-secondary/60 dark:text-accent/60">{p}</p>
                     </RevealAnimation>
                   ))}
-                </ul>
+                </div>
               </div>
               <div className={`flex-1 ${i % 2 === 1 ? 'lg:order-1' : ''}`}>
                 <RevealAnimation delay={0.3} direction="up">
@@ -187,7 +183,6 @@ const OplossingsLanding = ({
           </div>
         </section>
       ))}
-
     </main>
   );
 };

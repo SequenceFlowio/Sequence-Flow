@@ -30,56 +30,40 @@ const SupportFlowPage = () => {
           description: 'Een slimme chatbot die veelgestelde vragen direct beantwoordt en escaleert wanneer nodig.',
           image: chatbotImg,
           href: '/chatbot',
+          comingSoon: true,
         },
         {
           name: 'Booking Flow',
-          description: 'Automatische afsprakenbeheer en planning direct vanuit het klantgesprek.',
+          description: 'Automatisch afsprakenbeheer en planning direct vanuit het klantgesprek.',
           image: bookingFlowImg,
           href: '/booking-flow',
+          comingSoon: true,
         },
       ]}
-      appsHeading="Drie krachtige webapps voor complete ondersteuning"
-      appsDescription="Elke webapp dekt een kanaal af. Samen zorgen ze voor een naadloze klantervaring van eerste contact tot oplossing."
       sections={[
         {
-          heading: 'Wat is inbegrepen',
-          intro:
-            'Van eerste klantcontact tot escalatie — elke stap in uw supportproces wordt intelligent geautomatiseerd.',
-          items: [
-            { title: 'AI First-Line Support', description: 'AI beantwoordt veelgestelde vragen direct, 24/7, in de taal van uw klant.' },
-            { title: 'Intelligent Ticket Routing', description: 'Complexe vragen worden automatisch doorgestuurd naar de juiste medewerker of afdeling.' },
-            { title: 'Geautomatiseerde FAQ', description: 'Uw kennisbank wordt continu bijgewerkt op basis van binnenkomende vragen.' },
-            { title: 'Sentiment analyse', description: 'AI detecteert frustratie en escaleert proactief naar een medewerker.' },
-            { title: 'Multi-channel inbox', description: 'E-mail, chat en social media berichten in één overzicht.' },
-            { title: 'Rapportage dashboard', description: 'Inzicht in responstijden, klanttevredenheid en veelvoorkomende issues.' },
+          heading: 'Hoe Support Flow werkt',
+          paragraphs: [
+            'Support Flow zet AI in als uw first-line support: veelgestelde vragen worden direct beantwoord via e-mail, 24 uur per dag, 7 dagen per week. Complexe vragen worden automatisch doorgestuurd naar de juiste medewerker of afdeling — met de volledige context al beschikbaar.',
+            'AI detecteert frustratie in berichten en escaleert proactief, voordat een klant afhaakt. Alle kanalen komen samen in één overzichtelijke inbox met realtime rapportage over responstijden en klanttevredenheid.',
           ],
           imageSrc: '/images/oplossingen-support-flow-1.webp',
           imageAlt: 'Support Flow automatisering',
         },
         {
           heading: 'Voor wie is Support Flow?',
-          intro:
-            'Ideaal voor bedrijven die hun klanttevredenheid willen verhogen terwijl ze supportkosten verlagen.',
-          items: [
-            { title: 'E-commerce', description: 'Bestelstatus, retourafhandeling en productadvies automatisch beantwoord.' },
-            { title: 'SaaS', description: 'Technische vragen en onboarding support op schaal.' },
-            { title: 'Financiële dienstverlening', description: 'Veelgestelde vragen over producten en procedures direct beantwoord.' },
-            { title: 'Zorg', description: 'Afspraakbeheer en informatieverstrekking geautomatiseerd.' },
-            { title: 'Interne helpdesk', description: 'IT-support en HR-vragen automatisch afgehandeld.' },
+          paragraphs: [
+            'Support Flow is ideaal voor e-commerce, SaaS en zakelijke dienstverleners die hun klanttevredenheid willen verhogen terwijl ze de supportkosten verlagen. Van bestelstatus en retourafhandeling tot technische onboarding support — de AI handelt het af.',
+            'Ook intern werkt Support Flow: IT-helpdesk vragen en HR-procedures worden automatisch beantwoord, zodat uw interne teams minder worden belast met repetitieve vragen.',
           ],
           imageSrc: '/images/oplossingen-support-flow-2.webp',
           imageAlt: 'Support Flow toepassingen',
         },
         {
           heading: 'Schaalbaarheid en controle',
-          intro:
-            'Schaal uw klantenservice zonder concessies te doen aan kwaliteit.',
-          items: [
-            { title: 'Trainbare AI', description: 'Die leert van elke interactie en steeds beter wordt.' },
-            { title: 'Escalatieregels', description: 'Volledig aanpasbaar aan uw processen.' },
-            { title: 'Meertalige ondersteuning', description: 'Voor internationale klanten.' },
-            { title: 'SLA monitoring', description: 'Met automatische waarschuwingen.' },
-            { title: 'Naadloze overdracht', description: 'Van AI naar medewerker met volledige context.' },
+          paragraphs: [
+            'De AI leert van elke interactie en wordt continu beter. Escalatieregels zijn volledig aanpasbaar aan uw processen, en de overdracht van AI naar medewerker verloopt naadloos — inclusief de volledige gesprekscontext.',
+            'Support Flow ondersteunt meerdere talen voor internationale klanten en bewaakt uw SLA\'s met automatische waarschuwingen wanneer responstijden dreigen te worden overschreden.',
           ],
           imageSrc: '/images/oplossingen-support-flow-3.webp',
           imageAlt: 'Support Flow schaalbaarheid',

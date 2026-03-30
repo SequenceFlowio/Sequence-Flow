@@ -21,65 +21,48 @@ const LeadFlowPage = () => {
       apps={[
         {
           name: 'Outreach',
-          description: 'AI benadert prospects via LinkedIn en e-mail met gepersonaliseerde berichten op schaal.',
+          description: 'AI benadert prospects via e-mail met gepersonaliseerde berichten op schaal, volledig automatisch.',
           image: outreachImg,
           href: '/outreach',
         },
         {
           name: 'Content Gen',
-          description: 'Genereer relevante outreach content automatisch, afgestemd op elke prospect.',
+          description: 'Genereer relevante outreach content automatisch, afgestemd op elke prospect en hun situatie.',
           image: contentGenImg,
           href: '/content-gen',
         },
         {
           name: 'Reviews Gen',
-          description: 'Genereer automatisch review-verzoeken en verzamel klantbeoordelingen op de juiste momenten.',
+          description: 'Automatisch review-verzoeken versturen en klantbeoordelingen verzamelen op het juiste moment.',
           image: reviewGenImg,
           href: '/reviews-gen',
+          comingSoon: true,
         },
       ]}
-      appsHeading="Drie krachtige webapps in één flow"
-      appsDescription="Elke webapp pakt een specifiek onderdeel van uw lead pipeline aan. Samen vormen ze een volledig geautomatiseerd systeem."
       sections={[
         {
-          heading: 'Wat is inbegrepen',
-          intro:
-            'Elke stap in uw lead generatie wordt geautomatiseerd, van eerste contact tot gekwalificeerde afspraak.',
-          items: [
-            { title: 'Autonome Outreach', description: 'AI identificeert en benadert prospects via LinkedIn en e-mail met gepersonaliseerde berichten.' },
-            { title: 'Smart Lead Scoring', description: 'Elke lead krijgt automatisch een score op basis van engagement, bedrijfsdata en gedrag.' },
-            { title: 'Follow-up Engine', description: 'Slimme opvolgsequenties die automatisch worden getriggerd op het juiste moment.' },
-            { title: 'Multi-channel aanpak', description: 'Bereik prospects via LinkedIn, e-mail en andere kanalen in één geïntegreerde flow.' },
-            { title: 'CRM Sync', description: 'Alle interacties worden real-time gesynchroniseerd met uw CRM.' },
-            { title: 'Performance dashboard', description: 'Real-time inzicht in open rates, responses en conversies.' },
+          heading: 'Hoe Lead Flow werkt',
+          paragraphs: [
+            'Lead Flow automatiseert uw volledige outreach van A tot Z. Onze AI identificeert relevante prospects en benadert hen met gepersonaliseerde berichten via e-mail. Elke lead krijgt automatisch een score op basis van engagement en bedrijfsdata — zodat uw team zich alleen focust op de leads die er echt toe doen.',
+            'Slimme opvolgsequenties worden automatisch getriggerd op het juiste moment, terwijl alle interacties real-time worden gesynchroniseerd met uw CRM. Via het performance dashboard houdt u altijd grip op open rates, responses en conversies.',
           ],
           imageSrc: '/images/oplossingen-lead-flow-1.webp',
           imageAlt: 'Lead Flow automatisering',
         },
         {
           heading: 'Voor wie is Lead Flow?',
-          intro:
-            'Perfect voor sales teams die hun bereik willen vergroten zonder extra personeel.',
-          items: [
-            { title: 'B2B Sales', description: 'Vul uw pipeline met gekwalificeerde leads op schaal.' },
-            { title: 'Recruitment', description: 'Bereik passieve kandidaten automatisch.' },
-            { title: 'Partnerships', description: 'Identificeer en benader potentiële partners.' },
-            { title: 'Event promotie', description: 'Nodig relevante prospects uit voor uw events.' },
-            { title: 'Account-based marketing', description: 'Gerichte campagnes voor high-value accounts.' },
+          paragraphs: [
+            'Lead Flow is gebouwd voor B2B sales teams die hun pipeline willen vergroten zonder extra personeel in te zetten. Of u nu actief bent in recruitment, partnerships of account-based marketing — de flow past zich aan uw doelgroep en aanpak aan.',
+            'Ook voor event promotie werkt Lead Flow uitstekend: nodig relevante prospects automatisch uit op het juiste moment, met de juiste boodschap en zonder handmatig zoekwerk.',
           ],
           imageSrc: '/images/oplossingen-lead-flow-2.webp',
           imageAlt: 'Lead Flow toepassingen',
         },
         {
           heading: 'Schaalbaarheid en controle',
-          intro:
-            'Gebouwd voor teams die willen groeien zonder de kwaliteit van hun outreach te verliezen.',
-          items: [
-            { title: 'Instelbare volumes', description: 'Per dag/week om natuurlijk te blijven.' },
-            { title: 'A/B testing', description: 'Van berichten voor optimale resultaten.' },
-            { title: 'Blacklist management', description: 'Om bestaande klanten uit te sluiten.' },
-            { title: 'Compliance-ready', description: 'Voor AVG en LinkedIn-richtlijnen.' },
-            { title: 'Volledige transparantie', description: 'In alle verzonden berichten.' },
+          paragraphs: [
+            'Stel dagelijkse en wekelijkse volumes in om de outreach natuurlijk te houden. Met ingebouwde A/B testing van uw berichtgeving optimaliseert u continu op resultaat, zonder extra handmatig werk.',
+            'Lead Flow is volledig AVG-compliant en biedt volledige transparantie in alle verzonden berichten. Bestaande klanten en contacten worden automatisch uitgesloten via blacklist management.',
           ],
           imageSrc: '/images/oplossingen-lead-flow-3.webp',
           imageAlt: 'Lead Flow schaalbaarheid',
