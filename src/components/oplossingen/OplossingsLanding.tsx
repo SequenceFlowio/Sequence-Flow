@@ -120,7 +120,7 @@ const OplossingsLanding = ({
                       </figure>
                     </div>
                     <div className="space-y-1">
-                      <h3 className="text-heading-5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-primary">
+                      <h3 className="text-heading-5 flex items-center gap-1.5 transition-colors duration-200 group-hover:text-[#C7F56F]">
                         {app.name}
                         <svg className="size-4 translate-x-0 opacity-0 transition-all duration-200 group-hover:translate-x-0.5 group-hover:opacity-100" fill="none" viewBox="0 0 16 16">
                           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
