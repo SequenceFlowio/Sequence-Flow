@@ -1,6 +1,9 @@
 import OplossingsLanding from '@/components/oplossingen/OplossingsLanding';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
+import emailReplyImg from '@/components/content/email_reply.png';
+import chatbotImg from '@/components/content/chatbot.png';
+import bookingFlowImg from '@/components/content/booking_flow.png';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -19,14 +22,17 @@ const SupportFlowPage = () => {
         {
           name: 'Email Reply',
           description: 'AI beantwoordt inkomende e-mails automatisch met contextuele, gepersonaliseerde antwoorden.',
+          image: emailReplyImg,
         },
         {
           name: 'Chatbot',
           description: 'Een slimme chatbot die veelgestelde vragen direct beantwoordt en escaleert wanneer nodig.',
+          image: chatbotImg,
         },
         {
           name: 'Booking Flow',
           description: 'Automatische afsprakenbeheer en planning direct vanuit het klantgesprek.',
+          image: bookingFlowImg,
         },
       ]}
       appsHeading="Drie krachtige webapps voor complete ondersteuning"

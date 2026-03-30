@@ -1,6 +1,9 @@
 import OplossingsLanding from '@/components/oplossingen/OplossingsLanding';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
+import automatischeRapportageImg from '@/components/content/Automatische_Rapportage.png';
+import crmSyncImg from '@/components/content/CRM-Sync_Flow.png';
+import adminKillerImg from '@/components/content/Admin_Killer.png';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
@@ -19,14 +22,17 @@ const OperationsFlowPage = () => {
         {
           name: 'Automatische Rapportage',
           description: 'Dagelijkse, wekelijkse en maandelijkse rapporten worden automatisch gegenereerd en verstuurd.',
+          image: automatischeRapportageImg,
         },
         {
           name: 'CRM-Sync Flow',
           description: 'Automatische synchronisatie tussen al uw tools en uw CRM — altijd up-to-date data.',
+          image: crmSyncImg,
         },
         {
           name: 'Admin Killer',
           description: 'Repetitieve administratieve taken worden volledig geautomatiseerd zodat uw team zich focust op werk dat er toe doet.',
+          image: adminKillerImg,
         },
       ]}
       appsHeading="Drie webapps die uw operaties transformeren"
