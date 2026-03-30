@@ -4,12 +4,13 @@ import cardTwoImg from '@public/images/ns-img-91.png';
 import cardTwoImgDark from '@public/images/ns-img-dark-64.png';
 import cardThreeImg from '@public/images/ns-img-92.png';
 import cardThreeImgDark from '@public/images/ns-img-dark-65.png';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
 
 export interface WebApp {
   name: string;
   description: string;
+  image?: StaticImageData | string;
 }
 
 export interface FeatureItem {
@@ -86,18 +87,29 @@ const OplossingsLanding = ({
                   <div className="space-y-3">
                     <div className="dark:bg-background-5 w-full max-w-[409px] rounded-[20px] bg-white p-2.5">
                       <figure className="bg-background-3 dark:bg-background-7 overflow-hidden rounded-2xl p-4">
-                        <Image
-                          src={cardImgs[i].light}
-                          alt={app.name}
-                          className="h-full w-full object-cover dark:hidden"
-                          loading="lazy"
-                        />
-                        <Image
-                          src={cardImgs[i].dark}
-                          alt={app.name}
-                          className="hidden h-full w-full object-cover dark:block"
-                          loading="lazy"
-                        />
+                        {app.image ? (
+                          <Image
+                            src={app.image}
+                            alt={app.name}
+                            className="h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                        ) : (
+                          <>
+                            <Image
+                              src={cardImgs[i].light}
+                              alt={app.name}
+                              className="h-full w-full object-cover dark:hidden"
+                              loading="lazy"
+                            />
+                            <Image
+                              src={cardImgs[i].dark}
+                              alt={app.name}
+                              className="hidden h-full w-full object-cover dark:block"
+                              loading="lazy"
+                            />
+                          </>
+                        )}
                       </figure>
                     </div>
                     <div className="space-y-1">
