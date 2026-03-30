@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const blogs = getMarkDownData('src/data/blogs');
   const baseUrl = 'https://sequenceflow.io';
 
-  const staticPages = ['/', '/blog', '/oplossingen', '/hoe-wij-werken', '/contact'].map((path) => ({
+  const staticPages = ['/', '/blog', '/oplossingen', '/flow-bouwen', '/contact'].map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,

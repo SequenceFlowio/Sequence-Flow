@@ -12,7 +12,7 @@ export const footerLinks: FooterData[] = [
   {
     title: 'Menu',
     links: [
-      { label: 'Flow bouwen', href: '/hoe-wij-werken' },
+      { label: 'Flow bouwen', href: '/flow-bouwen' },
       { label: 'Blog', href: '/blog' },
     ],
   },

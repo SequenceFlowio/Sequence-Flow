@@ -13,7 +13,7 @@ export const mobileMenuData: MobileMenuGroup[] = [
   {
     id: 'hoe-wij-werken',
     title: 'Flow bouwen',
-    href: '/hoe-wij-werken',
+    href: '/flow-bouwen',
     submenu: [],
   },
   {
