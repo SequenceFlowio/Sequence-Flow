@@ -20,8 +20,8 @@ const Process02 = () => {
           <p className="mx-auto mb-8 max-w-[600px] text-secondary/60 dark:text-accent/60">
             Niet elke uitdaging past in een standaard product. Wij bouwen AI-workflows die naadloos aansluiten op uw unieke processen en systemen.
           </p>
-          <Link href="/contact" className="btn btn-md btn-secondary before:content-none">
-            Start mijn gratis Flow Scan
+          <Link href="/contact" className="btn btn-md btn-secondary normal-case before:content-none">
+            Start een gratis flow scan
           </Link>
         </div>
       </section>
