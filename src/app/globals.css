@@ -30,6 +30,23 @@
   }
 }
 
+@keyframes erMailPanel {
+  0%,
+  34% {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  46%,
+  72% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+
 @keyframes erFlowDot {
   0% {
     transform: translateX(0);

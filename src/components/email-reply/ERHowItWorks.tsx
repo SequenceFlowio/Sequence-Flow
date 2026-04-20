@@ -92,7 +92,7 @@ const ERHowItWorks = () => {
               offset={26}
               start="top 88%"
               end="bottom 35%"
-              toggleActions="play reverse play reverse">
+              toggleActions="play none none reset">
               <article className="relative rounded-[22px] border border-gray-200 bg-white p-5 shadow-[0_10px_34px_rgba(4,25,36,0.06)] sm:p-6">
                 <div className="mb-4 flex items-center justify-between">
                   <span className="inline-flex items-center rounded-full bg-secondary px-3 py-0.5 text-xs font-semibold text-white dark:bg-background-5">

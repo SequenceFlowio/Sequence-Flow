@@ -118,7 +118,13 @@ const ERHero = () => {
                   ))}
                 </div>
 
-                <div className="border-t border-[#C7F56F]/30 bg-[#f9ffe8] px-5 py-4 text-left">
+                <div
+                  className="border-t border-[#C7F56F]/30 bg-[#f9ffe8] px-5 py-4 text-left"
+                  style={{
+                    animation: 'erMailPanel 8.4s cubic-bezier(0.22,1,0.36,1) infinite',
+                    animationDelay: '2.15s',
+                    animationFillMode: 'both',
+                  }}>
                   <div className="mb-3 flex items-center gap-2">
                     <span className="flex size-5 items-center justify-center rounded-full bg-[#C7F56F] text-secondary">
                       <svg className="size-3" viewBox="0 0 16 16" fill="none">
