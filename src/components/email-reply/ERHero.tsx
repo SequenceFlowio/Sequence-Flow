@@ -95,7 +95,11 @@ const ERHero = () => {
                     <div
                       key={email.name}
                       className={`flex items-center gap-3 px-4 py-3 text-left ${index === 1 ? 'bg-[#f9ffe8]' : ''}`}
-                      style={{ animation: `erMailPop 7.8s ease-in-out infinite`, animationDelay: `${index * 1.45}s` }}>
+                      style={{
+                        animation: 'erMailPop 8.4s cubic-bezier(0.22,1,0.36,1) infinite',
+                        animationDelay: `${0.7 + index * 1.4}s`,
+                        animationFillMode: 'both',
+                      }}>
                       <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xs font-semibold text-gray-500">
                         {email.init}
                       </div>
