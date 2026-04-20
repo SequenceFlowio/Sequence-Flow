@@ -118,7 +118,10 @@ const ERFAQ = () => {
                 ))}
               </ul>
 
-              <Link href="https://emailreply.sequenceflow.io" className="btn btn-md btn-secondary normal-case before:content-none inline-block">
+              <Link
+                href="https://emailreply.sequenceflow.io"
+                className="inline-flex items-center justify-center rounded-full border border-[#C7F56F] bg-[#C7F56F] px-7 py-3 text-base font-semibold text-secondary transition-all duration-200 hover:brightness-95"
+              >
                 Start mijn gratis proefperiode →
               </Link>
             </div>
