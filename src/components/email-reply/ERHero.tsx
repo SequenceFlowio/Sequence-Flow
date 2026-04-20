@@ -122,7 +122,7 @@ const ERHero = () => {
                   className="border-t border-[#C7F56F]/30 bg-[#f9ffe8] px-5 py-4 text-left"
                   style={{
                     animation: 'erMailPanel 8.4s cubic-bezier(0.22,1,0.36,1) infinite',
-                    animationDelay: '2.15s',
+                    animationDelay: '3.3s',
                     animationFillMode: 'both',
                   }}>
                   <div className="mb-3 flex items-center gap-2">
