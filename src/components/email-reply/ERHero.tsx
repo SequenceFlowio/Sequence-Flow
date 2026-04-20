@@ -83,15 +83,6 @@ const ERHero = () => {
           <RevealAnimation delay={0.58}>
             <div className="mx-auto max-w-[740px]">
               <div className="relative overflow-hidden rounded-[26px] border border-gray-200 bg-white shadow-[0_20px_70px_rgba(3,20,30,0.14)]">
-                <div className="pointer-events-none absolute inset-x-3 top-0 h-16 rounded-b-3xl bg-gradient-to-b from-[#C7F56F]/35 to-transparent" style={{ animation: 'erHeroScan 4.4s ease-in-out infinite' }} />
-
-                <div className="pointer-events-none absolute -top-6 left-5 rounded-full border border-[#C7F56F]/40 bg-white px-3 py-1 text-[11px] font-semibold text-secondary shadow-sm" style={{ animation: 'erHeroFloat 5.4s ease-in-out infinite' }}>
-                  +42% snellere responstijd
-                </div>
-                <div className="pointer-events-none absolute -right-3 top-16 rounded-full border border-gray-200 bg-white px-3 py-1 text-[11px] font-semibold text-secondary shadow-sm" style={{ animation: 'erHeroFloatSlow 6.3s ease-in-out infinite' }}>
-                  3 nieuwe concepten klaar
-                </div>
-
                 <div className="flex items-center gap-1.5 border-b border-gray-100 bg-gray-50 px-4 py-3 text-left">
                   <span className="size-3 rounded-full bg-red-400/70" />
                   <span className="size-3 rounded-full bg-yellow-400/70" />
@@ -104,7 +95,7 @@ const ERHero = () => {
                     <div
                       key={email.name}
                       className={`flex items-center gap-3 px-4 py-3 text-left ${index === 1 ? 'bg-[#f9ffe8]' : ''}`}
-                      style={{ animation: `erHeroRow 6.6s ease-in-out ${index * 0.48}s infinite` }}>
+                      style={{ animation: `erMailPop 7.8s ease-in-out infinite`, animationDelay: `${index * 1.45}s` }}>
                       <div className="flex size-8 shrink-0 items-center justify-center rounded-full bg-gray-100 text-xs font-semibold text-gray-500">
                         {email.init}
                       </div>
@@ -125,7 +116,7 @@ const ERHero = () => {
 
                 <div className="border-t border-[#C7F56F]/30 bg-[#f9ffe8] px-5 py-4 text-left">
                   <div className="mb-3 flex items-center gap-2">
-                    <span className="flex size-5 items-center justify-center rounded-full bg-[#C7F56F] text-secondary" style={{ animation: 'erHeroPulse 2.2s ease-in-out infinite' }}>
+                    <span className="flex size-5 items-center justify-center rounded-full bg-[#C7F56F] text-secondary">
                       <svg className="size-3" viewBox="0 0 16 16" fill="none">
                         <path d="M3 8l3 3 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
@@ -142,20 +133,6 @@ const ERHero = () => {
                       Bedankt voor uw bericht. Uiteraard helpen wij u graag met de retour van uw bestelling. U kunt uw
                       retour aanmelden via onze retourpagina...
                     </p>
-                    <div className="mt-3 space-y-1.5">
-                      <div className="relative h-2 overflow-hidden rounded-full bg-gray-100">
-                        <div
-                          className="absolute inset-y-0 left-0 w-1/3 rounded-full bg-[#C7F56F]/70"
-                          style={{ animation: 'erHeroDraft 2.8s ease-in-out infinite' }}
-                        />
-                      </div>
-                      <div className="relative h-2 overflow-hidden rounded-full bg-gray-100">
-                        <div
-                          className="absolute inset-y-0 left-0 w-1/2 rounded-full bg-[#C7F56F]/45"
-                          style={{ animation: 'erHeroDraft 3.4s ease-in-out 0.4s infinite' }}
-                        />
-                      </div>
-                    </div>
                   </div>
 
                   <div className="flex gap-2">

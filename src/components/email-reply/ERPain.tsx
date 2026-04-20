@@ -119,7 +119,7 @@ const ERPain = () => {
                       <span className="flex size-8 items-center justify-center rounded-lg bg-[#C7F56F] text-secondary">
                         {pain.icon}
                       </span>
-                      <h3 className="text-base font-semibold">{pain.title}</h3>
+                      <h3 className="text-base font-semibold text-white">{pain.title}</h3>
                     </div>
                     <p className="text-sm leading-relaxed text-white/55">{pain.desc}</p>
                     <p className="mt-4 text-xs font-semibold text-[#C7F56F]">{pain.stat}</p>

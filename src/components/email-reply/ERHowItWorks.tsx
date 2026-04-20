@@ -84,8 +84,15 @@ const ERHowItWorks = () => {
             style={{ animation: 'erFlowDot 6.5s linear infinite' }}
           />
 
-          {steps.map((step, i) => (
-            <RevealAnimation key={step.n} delay={0.25 + i * 0.12} direction={i % 2 === 0 ? 'up' : 'down'} offset={32}>
+          {steps.map((step) => (
+            <RevealAnimation
+              key={step.n}
+              delay={0.05}
+              direction="up"
+              offset={26}
+              start="top 85%"
+              end="bottom 25%"
+              toggleActions="restart reverse restart reverse">
               <article className="relative rounded-[22px] border border-gray-200 bg-white p-5 shadow-[0_10px_34px_rgba(4,25,36,0.06)] sm:p-6">
                 <div className="mb-4 flex items-center justify-between">
                   <span className="inline-flex items-center rounded-full bg-secondary px-3 py-0.5 text-xs font-semibold text-white dark:bg-background-5">

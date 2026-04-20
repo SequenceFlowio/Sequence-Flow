@@ -23,6 +23,7 @@ interface RevealAnimationProps {
   instant?: boolean;
   start?: string;
   end?: string;
+  toggleActions?: string;
   direction?: 'up' | 'down' | 'left' | 'right';
   useSpring?: boolean;
   rotation?: number;
@@ -38,6 +39,7 @@ const RevealAnimation = ({
   instant = false,
   start = 'top 90%',
   end = 'top 50%',
+  toggleActions = 'play none none none',
   direction = 'down',
   useSpring = false,
   rotation = 0,
@@ -99,6 +101,7 @@ const RevealAnimation = ({
         start: start,
         end: end,
         scrub: false,
+        toggleActions: toggleActions,
       };
     }
 
@@ -137,7 +140,7 @@ const RevealAnimation = ({
     } else {
       gsap.from(element, animationProps);
     }
-  }, [duration, delay, offset, instant, start, end, direction, useSpring, rotation, animationType]);
+  }, [duration, delay, offset, instant, start, end, toggleActions, direction, useSpring, rotation, animationType]);
 
   // Early return if children is not valid (after all hooks)
   if (!children || !React.isValidElement(children)) {
