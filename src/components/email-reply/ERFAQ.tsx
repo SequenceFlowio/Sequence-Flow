@@ -118,7 +118,7 @@ const ERFAQ = () => {
                 ))}
               </ul>
 
-              <Link href="/contact" className="btn btn-md btn-secondary normal-case before:content-none inline-block">
+              <Link href="https://emailreply.sequenceflow.io" className="btn btn-md btn-secondary normal-case before:content-none inline-block">
                 Start mijn gratis proefperiode →
               </Link>
             </div>

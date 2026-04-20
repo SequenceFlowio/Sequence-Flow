@@ -5,7 +5,6 @@ import ERDemo from '@/components/email-reply/ERDemo';
 import ERBenefits from '@/components/email-reply/ERBenefits';
 import ERSocialProof from '@/components/email-reply/ERSocialProof';
 import ERFAQ from '@/components/email-reply/ERFAQ';
-import ERCTA from '@/components/email-reply/ERCTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
 
@@ -26,7 +25,6 @@ const EmailReplyPage = () => {
       <ERBenefits />
       <ERSocialProof />
       <ERFAQ />
-      <ERCTA />
     </main>
   );
 };

@@ -138,7 +138,7 @@ const ERHowItWorks = () => {
 
         <RevealAnimation delay={0.66}>
           <div className="mt-14 text-center">
-            <Link href="/contact" className="btn btn-md btn-secondary normal-case before:content-none">
+            <Link href="https://emailreply.sequenceflow.io" className="btn btn-md btn-secondary normal-case before:content-none">
               Start 14 dagen gratis
             </Link>
             <p className="mt-3 text-xs text-secondary/40">Gemiddeld 2 minuten insteltijd</p>

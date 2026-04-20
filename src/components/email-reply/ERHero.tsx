@@ -56,7 +56,7 @@ const ERHero = () => {
 
           <RevealAnimation delay={0.4}>
             <div className="mb-4 flex flex-col items-center gap-3 sm:flex-row sm:justify-center sm:gap-4">
-              <Link href="/contact" className="btn btn-md btn-secondary w-full normal-case before:content-none sm:w-auto">
+              <Link href="https://emailreply.sequenceflow.io" className="btn btn-md btn-secondary w-full normal-case before:content-none sm:w-auto">
                 Start 14 dagen gratis
               </Link>
               <a

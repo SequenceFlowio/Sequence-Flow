@@ -13,7 +13,7 @@ const ERCTA = () => {
               Sluit u aan bij 40+ MKB-bedrijven die hun e-mailsupport al hebben getransformeerd. Gratis proberen, geen creditcard nodig.
             </p>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link href="/contact" className="btn btn-md btn-secondary normal-case before:content-none">
+              <Link href="https://emailreply.sequenceflow.io" className="btn btn-md btn-secondary normal-case before:content-none">
                 Start 14 dagen gratis
               </Link>
               <Link
