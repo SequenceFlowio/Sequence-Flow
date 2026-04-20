@@ -27,6 +27,16 @@ Automatiseer interne bedrijfsprocessen met AI die administratie, rapportage en C
 
 ---
 
+## Webapps (kant-en-klare producten)
+
+### Email Reply
+AI-webapp die koppelt aan uw Gmail-inbox en automatisch conceptantwoorden genereert voor inkomende klantmails. U keurt elk concept goed, past aan of wijst af — niets gaat eruit zonder uw akkoord. Features: automatische conceptgeneratie, goedkeuringsflow, kennisbank (FAQs/beleid/productinfo), toon-instellingen, teamtoegang met rollen, Gmail OAuth-integratie. Pagina: https://www.sequenceflow.io/email-reply
+
+### Content Gen
+AI-webapp die volledig on-brand advertenties en social content genereert. Upload uw merk één keer (logo, kleuren, fonts, positionering) en de AI genereert content op schaal. Features: 5 advertentietemplates, 9 social media templates (Instagram, Facebook, LinkedIn, Pinterest), brand learning, inspo library, platform targeting, high-res export (1K/2K/4K). Pagina: https://www.sequenceflow.io/content-gen
+
+---
+
 ## Losse Flow-modules (Oplossingen)
 
 ### Admin-Killer

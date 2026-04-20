@@ -1,7 +1,10 @@
 import ERHero from '@/components/email-reply/ERHero';
-import ERFeatures from '@/components/email-reply/ERFeatures';
-import ERSteps from '@/components/email-reply/ERSteps';
-import ERTestimonials from '@/components/email-reply/ERTestimonials';
+import ERPain from '@/components/email-reply/ERPain';
+import ERHowItWorks from '@/components/email-reply/ERHowItWorks';
+import ERDemo from '@/components/email-reply/ERDemo';
+import ERBenefits from '@/components/email-reply/ERBenefits';
+import ERSocialProof from '@/components/email-reply/ERSocialProof';
+import ERFAQ from '@/components/email-reply/ERFAQ';
 import ERCTA from '@/components/email-reply/ERCTA';
 import { defaultMetadata } from '@/utils/generateMetaData';
 import { Metadata } from 'next';
@@ -17,9 +20,12 @@ const EmailReplyPage = () => {
   return (
     <main className="bg-white">
       <ERHero />
-      <ERFeatures />
-      <ERSteps />
-      <ERTestimonials />
+      <ERPain />
+      <ERHowItWorks />
+      <ERDemo />
+      <ERBenefits />
+      <ERSocialProof />
+      <ERFAQ />
       <ERCTA />
     </main>
   );
