@@ -98,9 +98,6 @@ const ERPain = () => {
 
         <RevealAnimation delay={0.4}>
           <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.03] p-4 sm:p-5">
-            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-20 bg-gradient-to-r from-[#071417] to-transparent" />
-            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-20 bg-gradient-to-l from-[#071417] to-transparent" />
-
             <Marquee autoFill pauseOnHover speed={34}>
               <div className="flex items-stretch gap-4 py-2 pr-4">
                 {pains.map((pain) => (
