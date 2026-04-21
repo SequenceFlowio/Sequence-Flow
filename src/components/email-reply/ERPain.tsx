@@ -1,11 +1,18 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import type { ReactNode } from 'react';
 import Marquee from 'react-fast-marquee';
+import Image, { type StaticImageData } from 'next/image';
+import repeatedQuestionsImage from '@/components/content/Repeated Questions.webp';
+import risingResponseTimesImage from '@/components/content/Rising Response Times.webp';
+import inconsistentRepliesImage from '@/components/content/Inconsistent Replies.webp';
+import supportCostsNotScalingImage from '@/components/content/Support Costs Not Scaling.webp';
+import expertsDoingRoutineWorkImage from '@/components/content/Experts Doing Routine Work.webp';
 
 interface PainItem {
   title: string;
   desc: string;
-  placeholder: string;
+  imageSrc: StaticImageData;
+  imageAlt: string;
   stat: string;
   icon: ReactNode;
 }
@@ -14,7 +21,8 @@ const pains: PainItem[] = [
   {
     title: 'Dezelfde vragen, elke dag opnieuw',
     desc: 'Uw team beantwoordt identieke vragen over en over. Uur na uur, dag na dag.',
-    placeholder: 'Inbox snapshot: herhaalde FAQ-mails',
+    imageSrc: repeatedQuestionsImage,
+    imageAlt: 'Inbox met herhaalde klantvragen en gelijkaardige onderwerpregels',
     stat: '42% van alle tickets zijn repetitief',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
@@ -26,7 +34,8 @@ const pains: PainItem[] = [
   {
     title: 'Responstijden die oplopen',
     desc: 'Hoe meer u groeit, hoe groter de achterstand. Klanten wachten, frustratie stijgt.',
-    placeholder: 'Queue monitor: SLA loopt op',
+    imageSrc: risingResponseTimesImage,
+    imageAlt: 'SLA dashboard met stijgende responstijd en breach risk melding',
     stat: 'Gem. wachttijd +63% in piekuren',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
@@ -38,7 +47,8 @@ const pains: PainItem[] = [
   {
     title: 'Inconsistente antwoorden',
     desc: 'Niet iedereen in uw team communiceert hetzelfde. Kwaliteit varieert per medewerker.',
-    placeholder: 'Quality review: 3 verschillende tones',
+    imageSrc: inconsistentRepliesImage,
+    imageAlt: 'Vergelijking van verschillende antwoorden op dezelfde klantvraag',
     stat: '1 vraag, 3 verschillende antwoorden',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
@@ -50,7 +60,8 @@ const pains: PainItem[] = [
   {
     title: 'Supportkosten die niet schalen',
     desc: 'Meer e-mails betekent meer personeel. De kosten groeien mee met uw succes.',
-    placeholder: 'Cost panel: stijgende headcount',
+    imageSrc: supportCostsNotScalingImage,
+    imageAlt: 'Kostenoverzicht met stijgende personeelskosten en ticketvolume',
     stat: 'Kosten stijgen sneller dan omzet',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
@@ -62,7 +73,8 @@ const pains: PainItem[] = [
   {
     title: 'Experts doen routinewerk',
     desc: 'Uw senior teamleden verliezen tijd aan standaardvragen in plaats van complexe cases.',
-    placeholder: 'Team load board: senior op FAQs',
+    imageSrc: expertsDoingRoutineWorkImage,
+    imageAlt: 'Team workload board waarop senior medewerkers routinevragen behandelen',
     stat: 'Tot 9 uur per week aan repetitief werk',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
@@ -104,12 +116,8 @@ const ERPain = () => {
                   <article
                     key={pain.title}
                     className="min-h-[280px] w-[320px] rounded-2xl border border-white/12 bg-[#0a1d23]/90 p-5 text-left backdrop-blur-xl">
-                    <div className="mb-4 aspect-[16/9] rounded-xl border border-white/10 bg-[linear-gradient(140deg,rgba(255,255,255,0.05),rgba(255,255,255,0.01))] p-3">
-                      <div className="relative flex h-full items-end rounded-lg border border-dashed border-white/20 bg-white/[0.02] p-3">
-                        <div className="absolute top-3 left-3 h-2.5 w-16 rounded-full bg-white/15" />
-                        <div className="absolute top-7 left-3 h-2.5 w-10 rounded-full bg-white/10" />
-                        <span className="text-[11px] font-medium tracking-wide text-white/55 uppercase">{pain.placeholder}</span>
-                      </div>
+                    <div className="relative mb-4 aspect-[16/9] overflow-hidden rounded-xl border border-white/10">
+                      <Image src={pain.imageSrc} alt={pain.imageAlt} fill className="object-cover" sizes="320px" />
                     </div>
 
                     <div className="mb-2 flex items-center gap-2 text-white">
