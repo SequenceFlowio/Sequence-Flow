@@ -98,12 +98,12 @@ const ERPain = () => {
 
         <RevealAnimation delay={0.4}>
           <div className="relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.03] p-4 sm:p-5">
-            <Marquee autoFill pauseOnHover speed={34}>
+            <Marquee autoFill pauseOnHover speed={34} gradient={false}>
               <div className="flex items-stretch gap-4 py-2 pr-4">
                 {pains.map((pain) => (
                   <article
                     key={pain.title}
-                    className="min-h-[280px] w-[320px] rounded-2xl border border-white/12 bg-[#0a1d23]/90 p-5 text-left shadow-[0_14px_40px_rgba(0,0,0,0.24)] backdrop-blur-xl">
+                    className="min-h-[280px] w-[320px] rounded-2xl border border-white/12 bg-[#0a1d23]/90 p-5 text-left backdrop-blur-xl">
                     <div className="mb-4 aspect-[16/9] rounded-xl border border-white/10 bg-[linear-gradient(140deg,rgba(255,255,255,0.05),rgba(255,255,255,0.01))] p-3">
                       <div className="relative flex h-full items-end rounded-lg border border-dashed border-white/20 bg-white/[0.02] p-3">
                         <div className="absolute top-3 left-3 h-2.5 w-16 rounded-full bg-white/15" />
