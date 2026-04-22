@@ -1,6 +1,6 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
 import aiMailImage from '@/components/content/ai mail.webp';
-import gmailIntergratieImage from '@/components/content/gmail intergratie.webp';
+import gmailIntergratieImage from '@/components/content/gmail.webp';
 import kennisbankImage from '@/components/content/kennisbank.webp';
 import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
