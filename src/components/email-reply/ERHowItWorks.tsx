@@ -1,4 +1,8 @@
 import RevealAnimation from '@/components/animation/RevealAnimation';
+import aiMailImage from '@/components/content/ai mail.webp';
+import gmailIntergratieImage from '@/components/content/gmail intergratie.webp';
+import kennisbankImage from '@/components/content/kennisbank.webp';
+import Image, { type StaticImageData } from 'next/image';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import Marquee from 'react-fast-marquee';
@@ -7,7 +11,8 @@ interface StepItem {
   n: string;
   title: string;
   desc: string;
-  visual: string;
+  imageSrc: StaticImageData;
+  imageAlt: string;
   icon: ReactNode;
 }
 
@@ -16,7 +21,8 @@ const steps: StepItem[] = [
     n: '01',
     title: 'Koppel uw Gmail',
     desc: 'Verbind uw inbox via OAuth in een paar klikken. Geen technische setup of API-sleutels nodig.',
-    visual: 'Placeholder: Gmail connect flow',
+    imageSrc: gmailIntergratieImage,
+    imageAlt: 'Gmail integratie scherm voor koppeling met inbox',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
         <rect x="4" y="6" width="16" height="12" rx="2" stroke="currentColor" strokeWidth="1.8" />
@@ -28,7 +34,8 @@ const steps: StepItem[] = [
     n: '02',
     title: 'Train uw kennisbank',
     desc: 'Upload FAQ, beleid en productdetails. Zo schrijft de AI antwoorden die passen bij uw merk en processen.',
-    visual: 'Placeholder: Knowledge base index',
+    imageSrc: kennisbankImage,
+    imageAlt: 'Kennisbank overzicht met FAQ en beleidsinformatie',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
         <path d="M6 5h12v14H6z" stroke="currentColor" strokeWidth="1.8" />
@@ -40,7 +47,8 @@ const steps: StepItem[] = [
     n: '03',
     title: 'AI beantwoordt, u controleert',
     desc: 'Elke mail krijgt automatisch een concept. U keurt goed, past aan of wijst af voordat er iets uitgaat.',
-    visual: 'Placeholder: Approval dashboard',
+    imageSrc: aiMailImage,
+    imageAlt: 'AI mailconcept klaar voor review en goedkeuring',
     icon: (
       <svg className="size-5" viewBox="0 0 24 24" fill="none">
         <circle cx="12" cy="12" r="8" stroke="currentColor" strokeWidth="1.8" />
@@ -103,12 +111,8 @@ const ERHowItWorks = () => {
                   </span>
                 </div>
 
-                <div className="mb-4 aspect-[16/10] rounded-xl border border-gray-200 bg-[linear-gradient(135deg,rgba(247,250,252,1),rgba(233,241,245,0.9))] p-3">
-                  <div className="relative flex h-full items-end rounded-lg border border-dashed border-gray-300 bg-white/70 p-3">
-                    <div className="absolute top-3 left-3 h-2.5 w-16 rounded-full bg-gray-200" />
-                    <div className="absolute top-7 left-3 h-2.5 w-10 rounded-full bg-gray-200" />
-                    <span className="text-[11px] font-medium tracking-wide text-secondary/50 uppercase">{step.visual}</span>
-                  </div>
+                <div className="relative mb-4 aspect-[16/10] overflow-hidden rounded-xl border border-gray-200">
+                  <Image src={step.imageSrc} alt={step.imageAlt} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 33vw" />
                 </div>
 
                 <h3 className="text-heading-5 mb-2">{step.title}</h3>
